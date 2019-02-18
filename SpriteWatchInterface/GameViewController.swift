@@ -451,7 +451,7 @@ class GameViewController: UIViewController, WCSessionDelegate {
             showingView.ignoresSiblingOrder = true
             showingView.showsFPS = true
             showingView.showsNodeCount = true
-            showingView.preferredFramesPerSecond = 1
+            //showingView.preferredFramesPerSecond = 1
             
         }
         
