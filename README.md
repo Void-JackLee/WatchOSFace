@@ -8,5 +8,5 @@ Screenshots in application
 应用内截图
 
 ![Heart theme](images/watch_heart.png)![Star theme](images/watch_star.png)
-![Selector on phone](images/phone.png)![Selector on watch](images/watch_heart.png)![Menu on watch](images/watch_menu.png)
+![Selector on phone](images/phone.png)![Selector on watch](images/watch_select.png)![Menu on watch](images/watch_menu.png)
 
