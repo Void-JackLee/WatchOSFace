@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14460.31" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch38" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="watchOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14460.16"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller fullScreen="YES" id="AgC-eL-Hgc" customClass="InterfaceController" customModule="mWatchFace" customModuleProvider="target">
+                    <items>
+                        <spriteKitScene height="1" alignment="left" id="eh2-bW-rMT"/>
+                        <table alignment="left" id="yYI-q7-g9l">
+                            <items>
+                                <tableRow identifier="TableRow" id="NTK-nU-TEM" customClass="TableRowController" customModule="mWatchFace_Extension">
+                                    <group key="rootItem" width="1" height="0.0" alignment="left" id="mV2-La-DQ8">
+                                        <items>
+                                            <imageView width="0.5" height="2" alignment="left" id="Gbe-ga-ksz"/>
+                                            <label width="0.5" alignment="center" verticalAlignment="center" text="Label" textAlignment="center" id="qd8-AC-oXd"/>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="interfaceNameTextView" destination="qd8-AC-oXd" id="6aW-2E-LHw"/>
+                                        <outlet property="interfacePic" destination="Gbe-ga-ksz" id="1eD-S1-yds"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <menu key="menu" id="fI3-9C-ABU">
+                        <items>
+                            <menuItem title="设置表盘" image="ChooseInterfaceIcon" id="b31-w0-4uJ">
+                                <connections>
+                                    <action selector="showSwitcher" destination="AgC-eL-Hgc" id="ler-Ss-UXE"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="取消" icon="decline" id="q0t-AO-Auz"/>
+                        </items>
+                    </menu>
+                    <connections>
+                        <outlet property="interfaceTable" destination="yYI-q7-g9l" id="e3j-ku-MDJ"/>
+                        <outlet property="skInterface" destination="eh2-bW-rMT" id="Wme-JX-I9n"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="220" y="345"/>
+        </scene>
+        <!--Static Notification Interface Controller-->
+        <scene sceneID="AEw-b0-oYE">
+            <objects>
+                <notificationController id="YCC-NB-fut">
+                    <items>
+                        <label alignment="left" text="Alert Label" numberOfLines="0" id="IdU-wH-bcW"/>
+                    </items>
+                    <notificationCategory key="notificationCategory" identifier="myCategory" id="JfB-70-Muf"/>
+                    <connections>
+                        <outlet property="notificationAlertLabel" destination="IdU-wH-bcW" id="JKC-fr-R95"/>
+                        <segue destination="4sK-HA-Art" kind="relationship" relationship="dynamicNotificationInterface" id="kXh-Jw-8B1"/>
+                        <segue destination="eXb-UN-Cd0" kind="relationship" relationship="dynamicInteractiveNotificationInterface" id="mpB-YA-K8N"/>
+                    </connections>
+                </notificationController>
+            </objects>
+            <point key="canvasLocation" x="220" y="643"/>
+        </scene>
+        <!--Notification Controller-->
+        <scene sceneID="ZPc-GJ-vnh">
+            <objects>
+                <controller id="4sK-HA-Art" customClass="NotificationController" customModule="mWatchFace" customModuleProvider="target"/>
+            </objects>
+            <point key="canvasLocation" x="468" y="643"/>
+        </scene>
+        <!--Notification Controller-->
+        <scene sceneID="Niz-AI-uX2">
+            <objects>
+                <controller id="eXb-UN-Cd0" customClass="NotificationController" customModule="mWatchFace" customModuleProvider="target"/>
+            </objects>
+            <point key="canvasLocation" x="468" y="345"/>
+        </scene>
+    </scenes>
+</document>
