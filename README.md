@@ -16,8 +16,8 @@ Licensed under the GPL-2.0 License.
 
 ![Heart theme](images/watch_heart_small.png)![Star theme](images/watch_star_small.png)
 
-![Selector on phone](images/phone_small.png)!
+![Selector on phone](images/phone_small.png)
 
-[Selector on watch](images/watch_select_small.png)![Menu on watch](images/watch_menu_small.png)
+![Selector on watch](images/watch_select_small.png)![Menu on watch](images/watch_menu_small.png)
 
 
