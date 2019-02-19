@@ -26,6 +26,8 @@
 		A401F827221457B90047C89B /* HideStatu.m in Sources */ = {isa = PBXBuildFile; fileRef = A401F825221457B80047C89B /* HideStatu.m */; };
 		A46218DB221B13F800EA3E6C /* ProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A46218D8221B13F800EA3E6C /* ProgressHUD.bundle */; };
 		A46218DC221B13F800EA3E6C /* ProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = A46218DA221B13F800EA3E6C /* ProgressHUD.m */; };
+		A46218DD221BCAAE00EA3E6C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A401F815221454100047C89B /* Assets.xcassets */; };
+		A46218DE221BCAD400EA3E6C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A401F815221454100047C89B /* Assets.xcassets */; };
 		A4C45CDC2216E60A00B13CB8 /* StyleOrganized.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C45CDB2216E60A00B13CB8 /* StyleOrganized.swift */; };
 		A4C45CDD2216E6E700B13CB8 /* HandStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40EB9EB2215B2EB004C3009 /* HandStyle.swift */; };
 		A4C45CDE2216E6ED00B13CB8 /* BackgroundStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C45CD82215C3E300B13CB8 /* BackgroundStyle.swift */; };
@@ -412,6 +414,7 @@
 				A401F7D0221453830047C89B /* Main.storyboard in Resources */,
 				A401F7D2221453870047C89B /* Assets.xcassets in Resources */,
 				A401F7D5221453870047C89B /* LaunchScreen.storyboard in Resources */,
+				A46218DD221BCAAE00EA3E6C /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -434,6 +437,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A401F8002214540F0047C89B /* Assets.xcassets in Resources */,
+				A46218DE221BCAD400EA3E6C /* Assets.xcassets in Resources */,
 				A401F7FE2214540E0047C89B /* Interface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
