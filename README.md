@@ -1,7 +1,7 @@
 # WatchOSFace
 An Apple Watch face application with SpriteKit on WatchOS. 一个使用SpriteKit的Apple Watch表盘应用程序。
 
-Written with<img src="https://swift.org/assets/images/swift.svg" alt="Swift logo" height="20" >. 使用<img src="https://swift.org/assets/images/swift.svg" alt="Swift logo" height="20" >语言编写
+Written with <img src="https://swift.org/assets/images/swift.svg" alt="Swift logo" height="20" >. 使用<img src="https://swift.org/assets/images/swift.svg" alt="Swift logo" height="20" >语言编写
 
 # License
 Copyright © 2019 Jack Lee. All rights reserved.
