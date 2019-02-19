@@ -2,8 +2,8 @@
 //  NotificationController.swift
 //  mWatchFace Extension
 //
-//  Created by 李弘辰 on 2019/2/13.
-//  Copyright © 2019 李弘辰. All rights reserved.
+//  Created by Jack Li on 2019/2/13.
+//  Copyright © 2019 Jack Li. All rights reserved.
 //
 
 import WatchKit
