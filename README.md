@@ -1,14 +1,24 @@
 # WatchOSFace
-An Apple Watch face application with SpriteKit on WatchOS. 一个使用SpriteKit的Apple Watch表盘应用程序。
+An Apple Watch face application with SpriteKit on WatchOS. 
 
-Written with <img src="https://swift.org/assets/images/swift.svg" alt="Swift logo" height="20" >. 使用<img src="https://swift.org/assets/images/swift.svg" alt="Swift logo" height="20" >语言编写
+一个使用SpriteKit的Apple Watch表盘应用程序。
 
-# License
+Written with <img src="https://swift.org/assets/images/swift.svg" alt="Swift logo" height="20" >.
+
+使用<img src="https://swift.org/assets/images/swift.svg" alt="Swift logo" height="20" >语言编写
+
+### 更新日志
+
+* 2019.2.22 Fixed the BAD ADRESS bug.
+修复指针错误导致的错误引用bug。
+
+
+# License 开源证书
 Copyright © 2019 Jack Lee. All rights reserved.
 
 Licensed under the GPL-2.0 License.
 
-# Dependencies
+# Dependencies 依赖
 * [ProgressHUD](https://github.com/relatedcode/ProgressHUD)
 * How to hide digital time : [SpriteKitWatchFace](https://github.com/steventroughtonsmith/SpriteKitWatchFace)
 

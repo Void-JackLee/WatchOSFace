@@ -30,7 +30,8 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
         interfaceTable.setHidden(false)
     }
     
-    let scene = FaceScene(size : CGSize(width: 312, height: 390))
+    var scene : FaceScene?
+    let size = CGSize(width: 312, height: 390)
     
     let faces = StyleOrganized.themes
     
@@ -59,18 +60,10 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
         connect()
         // Configure interface objects here.
         
-        
-        scene.anchorPoint = CGPoint(x: 0.5, y: 0.5)
-        // Set the scale mode to scale to fit the window
-        scene.scaleMode = .aspectFill
-        
-        // Present the scene
-        self.skInterface.presentScene(scene)
+        setScene(id: (settings!["interfaceID_current"] as! Dictionary<String, Int>)["id"]!)
         
         // Use a value that will maintain a consistent frame rate
         self.skInterface.preferredFramesPerSecond = 30
-        
-        scene.presentFace(id : (settings!["interfaceID_current"] as! Dictionary<String, Int>)["id"]!)
         
         interfaceTable.setNumberOfRows(faces.count, withRowType: "TableRow")
         
@@ -85,7 +78,7 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
     }
     
     override func table(_ table: WKInterfaceTable, didSelectRowAt rowIndex: Int) {
-        scene.presentFace(id : faces[rowIndex][2] as! Int)
+        setScene(id: faces[rowIndex][2] as! Int)
         skInterface.setHidden(false)
         interfaceTable.setHidden(true)
         var dict = settings!["interfaceID_current"] as! Dictionary<String, Int>
@@ -93,9 +86,7 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
         dict["time"] = Int(Date().timeIntervalSince1970)
         settings!["interfaceID_current"] = dict
         saveFile()
-        sendMessage(session: session!, message: settings!) { (reply : [String : Any]) in
-            
-        }
+        sendMessage(session: session!, message: settings!) { (reply : [String : Any]) in }
     }
     
     override func didAppear() {
@@ -104,12 +95,22 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
         interfaceTable.setHidden(true)
     }
     
+    func setScene(id : Int)
+    {
+        scene = FaceScene(size: size, id: id)
+        scene!.anchorPoint = CGPoint(x: 0.5, y: 0.5)
+        scene!.scaleMode = .aspectFill
+        skInterface.presentScene(scene!)
+    }
+    
     func updateUI()
     {
         let id = (settings!["interfaceID_current"] as! Dictionary<String, Int>)["id"]!
-        if (scene.currentId != id)
+        if (scene!.currentId != id)
         {
-            scene.presentFace(id : id)
+            setScene(id: id)
+            skInterface.setHidden(false)
+            interfaceTable.setHidden(true)
         }
     }
     

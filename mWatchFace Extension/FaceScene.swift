@@ -13,23 +13,26 @@ class FaceScene: SKScene {
     var style : StyleOrganized?
     var currentId : Int = 0xF001
     
+    convenience init(size: CGSize, id : Int) {
+        self.init(size: size)
+        currentId = id
+        presentFace()
+    }
+    
+    
     override func sceneDidLoad() {
         
     }
     
-    public func presentFace(id : Int)
+    public func presentFace()
     {
-        removeAllChildren()
-        switch id {
+        switch currentId {
         case 0xF001:
             style = StyleOrganized(scene: self, foregroundStyle: .Basic("regular"), backgroundStyle: .Particle("heart"))
-            currentId = id
         case 0xF002:
             style = StyleOrganized(scene: self, foregroundStyle: .Basic("regular"), backgroundStyle: .Particle("star"))
-            currentId = id
         default:
             style = StyleOrganized(scene: self, foregroundStyle: .Basic("regular"), backgroundStyle: .Particle("heart"))
-            currentId = 0xF001
         }
         
     }

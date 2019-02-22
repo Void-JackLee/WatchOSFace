@@ -184,7 +184,7 @@ class GameViewController: UIViewController, WCSessionDelegate {
             DispatchQueue.main.async {
                 ProgressHUD.show()
             }
-            print("打开菊花")
+            //print("打开菊花")
             session.sendMessage(message, replyHandler: { (reply : [String : Any]) in
                 self.isSending = false
                 // 关闭菊花
@@ -387,11 +387,10 @@ class GameViewController: UIViewController, WCSessionDelegate {
             
             
             cell.title.text = (data[index][1] as! String)
-            let scene = FaceScene(size : CGSize(width: WIDTH_SCENE, height: HEIGHT_SCENE))
+            let scene = FaceScene(size: CGSize(width: WIDTH_SCENE, height: HEIGHT_SCENE), id: data[index][2] as! Int)
             scene.scaleMode = .aspectFit
             scene.anchorPoint = CGPoint(x: 0.5, y: 0.5)
             cell.showingView.presentScene(scene)
-            scene.presentFace(id: data[index][2] as! Int)
             return cell
         }
         
