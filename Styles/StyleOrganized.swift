@@ -78,7 +78,7 @@ class StyleOrganized
         
         func initStar()
         {
-            let _ = BackgroundStyle.ParticleStarInit(scene: scene, texture: SKTexture(imageNamed: "dot"), size: CGSize(width: 1, height: 100))
+            BackgroundStyle.ParticleStarInit.add(scene: scene, texture: SKTexture(imageNamed: "dot"), size: CGSize(width: 1, height: 100))
             
             let back = SKSpriteNode(imageNamed: "stars")
             back.scale(to: CGSize(width: scene.frame.width, height: scene.frame.height))

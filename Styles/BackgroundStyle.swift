@@ -76,18 +76,12 @@ enum BackgroundStyle
     
     class ParticleStarInit
     {
-        let particle = SKEmitterNode()
-        private var scene : SKNode
         
-        init(scene : SKNode, texture : SKTexture, size : CGSize) {
-            self.scene = scene
+        static func add(scene : SKNode, texture : SKTexture, size : CGSize)
+        {
+            let particle = SKEmitterNode()
             particle.particleTexture = texture
             particle.particleSize = size
-            initView()
-        }
-        
-        private func initView()
-        {
             particle.zPosition = -1
             particle.position = CGPoint(x: -250, y: -250)
             particle.particleBirthRate = 20
