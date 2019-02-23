@@ -28,6 +28,19 @@
 		A46218DC221B13F800EA3E6C /* ProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = A46218DA221B13F800EA3E6C /* ProgressHUD.m */; };
 		A46218DD221BCAAE00EA3E6C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A401F815221454100047C89B /* Assets.xcassets */; };
 		A46218DE221BCAD400EA3E6C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A401F815221454100047C89B /* Assets.xcassets */; };
+		A46218E62221436400EA3E6C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46218E52221436400EA3E6C /* AppDelegate.swift */; };
+		A46218E82221436400EA3E6C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46218E72221436400EA3E6C /* ViewController.swift */; };
+		A46218EA2221436700EA3E6C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A46218E92221436700EA3E6C /* Assets.xcassets */; };
+		A46218ED2221436700EA3E6C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A46218EB2221436700EA3E6C /* Main.storyboard */; };
+		A46218F92221436700EA3E6C /* WatchFaceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46218F82221436700EA3E6C /* WatchFaceTests.swift */; };
+		A46219042221436700EA3E6C /* WatchFaceUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46219032221436700EA3E6C /* WatchFaceUITests.swift */; };
+		A462190F2221440400EA3E6C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A401F815221454100047C89B /* Assets.xcassets */; };
+		A462191022214E3100EA3E6C /* FaceScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = A401F80F2214540F0047C89B /* FaceScene.swift */; };
+		A462191122214E3800EA3E6C /* HandStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40EB9EB2215B2EB004C3009 /* HandStyle.swift */; };
+		A462191222214E3A00EA3E6C /* BackgroundStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C45CD82215C3E300B13CB8 /* BackgroundStyle.swift */; };
+		A462191322214E3D00EA3E6C /* StyleOrganized.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C45CDB2216E60A00B13CB8 /* StyleOrganized.swift */; };
+		A462191722217F5700EA3E6C /* WindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A462191622217F5700EA3E6C /* WindowController.swift */; };
+		A46219192221A53900EA3E6C /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = A46219182221A53900EA3E6C /* README.md */; };
 		A4C45CDC2216E60A00B13CB8 /* StyleOrganized.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C45CDB2216E60A00B13CB8 /* StyleOrganized.swift */; };
 		A4C45CDD2216E6E700B13CB8 /* HandStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40EB9EB2215B2EB004C3009 /* HandStyle.swift */; };
 		A4C45CDE2216E6ED00B13CB8 /* BackgroundStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C45CD82215C3E300B13CB8 /* BackgroundStyle.swift */; };
@@ -65,6 +78,20 @@
 			proxyType = 1;
 			remoteGlobalIDString = A401F7F92214540E0047C89B;
 			remoteInfo = mWatchFace;
+		};
+		A46218F52221436700EA3E6C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A401F7B9221453830047C89B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A46218E22221436400EA3E6C;
+			remoteInfo = WatchFace;
+		};
+		A46219002221436700EA3E6C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A401F7B9221453830047C89B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A46218E22221436400EA3E6C;
+			remoteInfo = WatchFace;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -127,6 +154,21 @@
 		A46218D8221B13F800EA3E6C /* ProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ProgressHUD.bundle; sourceTree = "<group>"; };
 		A46218D9221B13F800EA3E6C /* ProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgressHUD.h; sourceTree = "<group>"; };
 		A46218DA221B13F800EA3E6C /* ProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressHUD.m; sourceTree = "<group>"; };
+		A46218E32221436400EA3E6C /* WatchFace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WatchFace.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A46218E52221436400EA3E6C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A46218E72221436400EA3E6C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A46218E92221436700EA3E6C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A46218EC2221436700EA3E6C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A46218EE2221436700EA3E6C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A46218EF2221436700EA3E6C /* WatchFace.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WatchFace.entitlements; sourceTree = "<group>"; };
+		A46218F42221436700EA3E6C /* WatchFaceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WatchFaceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A46218F82221436700EA3E6C /* WatchFaceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchFaceTests.swift; sourceTree = "<group>"; };
+		A46218FA2221436700EA3E6C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A46218FF2221436700EA3E6C /* WatchFaceUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WatchFaceUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A46219032221436700EA3E6C /* WatchFaceUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchFaceUITests.swift; sourceTree = "<group>"; };
+		A46219052221436700EA3E6C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A462191622217F5700EA3E6C /* WindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowController.swift; sourceTree = "<group>"; };
+		A46219182221A53900EA3E6C /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		A4C45CD82215C3E300B13CB8 /* BackgroundStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundStyle.swift; sourceTree = "<group>"; };
 		A4C45CDB2216E60A00B13CB8 /* StyleOrganized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleOrganized.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -160,18 +202,43 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A46218E02221436400EA3E6C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A46218F12221436700EA3E6C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A46218FC2221436700EA3E6C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		A401F7B8221453830047C89B = {
 			isa = PBXGroup;
 			children = (
+				A46219182221A53900EA3E6C /* README.md */,
 				A40EB9EE2215B370004C3009 /* Styles */,
 				A401F7C3221453830047C89B /* SpriteWatchInterface */,
 				A401F7DE221453870047C89B /* SpriteWatchInterfaceTests */,
 				A401F7E9221453870047C89B /* SpriteWatchInterfaceUITests */,
 				A401F7FB2214540E0047C89B /* mWatchFace */,
 				A401F80A2214540F0047C89B /* mWatchFace Extension */,
+				A46218E42221436400EA3E6C /* WatchFace */,
+				A46218F72221436700EA3E6C /* WatchFaceTests */,
+				A46219022221436700EA3E6C /* WatchFaceUITests */,
 				A401F7C2221453830047C89B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -184,6 +251,9 @@
 				A401F7E6221453870047C89B /* SpriteWatchInterfaceUITests.xctest */,
 				A401F7FA2214540E0047C89B /* mWatchFace.app */,
 				A401F8062214540F0047C89B /* mWatchFace Extension.appex */,
+				A46218E32221436400EA3E6C /* WatchFace.app */,
+				A46218F42221436700EA3E6C /* WatchFaceTests.xctest */,
+				A46218FF2221436700EA3E6C /* WatchFaceUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -258,6 +328,38 @@
 				A4C45CDB2216E60A00B13CB8 /* StyleOrganized.swift */,
 			);
 			path = Styles;
+			sourceTree = "<group>";
+		};
+		A46218E42221436400EA3E6C /* WatchFace */ = {
+			isa = PBXGroup;
+			children = (
+				A46218E52221436400EA3E6C /* AppDelegate.swift */,
+				A46218E72221436400EA3E6C /* ViewController.swift */,
+				A46218E92221436700EA3E6C /* Assets.xcassets */,
+				A46218EB2221436700EA3E6C /* Main.storyboard */,
+				A46218EE2221436700EA3E6C /* Info.plist */,
+				A46218EF2221436700EA3E6C /* WatchFace.entitlements */,
+				A462191622217F5700EA3E6C /* WindowController.swift */,
+			);
+			path = WatchFace;
+			sourceTree = "<group>";
+		};
+		A46218F72221436700EA3E6C /* WatchFaceTests */ = {
+			isa = PBXGroup;
+			children = (
+				A46218F82221436700EA3E6C /* WatchFaceTests.swift */,
+				A46218FA2221436700EA3E6C /* Info.plist */,
+			);
+			path = WatchFaceTests;
+			sourceTree = "<group>";
+		};
+		A46219022221436700EA3E6C /* WatchFaceUITests */ = {
+			isa = PBXGroup;
+			children = (
+				A46219032221436700EA3E6C /* WatchFaceUITests.swift */,
+				A46219052221436700EA3E6C /* Info.plist */,
+			);
+			path = WatchFaceUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -352,6 +454,59 @@
 			productReference = A401F8062214540F0047C89B /* mWatchFace Extension.appex */;
 			productType = "com.apple.product-type.watchkit2-extension";
 		};
+		A46218E22221436400EA3E6C /* WatchFace */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A462190C2221436700EA3E6C /* Build configuration list for PBXNativeTarget "WatchFace" */;
+			buildPhases = (
+				A46218DF2221436400EA3E6C /* Sources */,
+				A46218E02221436400EA3E6C /* Frameworks */,
+				A46218E12221436400EA3E6C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WatchFace;
+			productName = WatchFace;
+			productReference = A46218E32221436400EA3E6C /* WatchFace.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A46218F32221436700EA3E6C /* WatchFaceTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A462190D2221436700EA3E6C /* Build configuration list for PBXNativeTarget "WatchFaceTests" */;
+			buildPhases = (
+				A46218F02221436700EA3E6C /* Sources */,
+				A46218F12221436700EA3E6C /* Frameworks */,
+				A46218F22221436700EA3E6C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A46218F62221436700EA3E6C /* PBXTargetDependency */,
+			);
+			name = WatchFaceTests;
+			productName = WatchFaceTests;
+			productReference = A46218F42221436700EA3E6C /* WatchFaceTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		A46218FE2221436700EA3E6C /* WatchFaceUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A462190E2221436700EA3E6C /* Build configuration list for PBXNativeTarget "WatchFaceUITests" */;
+			buildPhases = (
+				A46218FB2221436700EA3E6C /* Sources */,
+				A46218FC2221436700EA3E6C /* Frameworks */,
+				A46218FD2221436700EA3E6C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A46219012221436700EA3E6C /* PBXTargetDependency */,
+			);
+			name = WatchFaceUITests;
+			productName = WatchFaceUITests;
+			productReference = A46218FF2221436700EA3E6C /* WatchFaceUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -381,6 +536,17 @@
 						CreatedOnToolsVersion = 10.1;
 						LastSwiftMigration = 1010;
 					};
+					A46218E22221436400EA3E6C = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					A46218F32221436700EA3E6C = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = A46218E22221436400EA3E6C;
+					};
+					A46218FE2221436700EA3E6C = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = A46218E22221436400EA3E6C;
+					};
 				};
 			};
 			buildConfigurationList = A401F7BC221453830047C89B /* Build configuration list for PBXProject "SpriteWatchInterface" */;
@@ -401,6 +567,9 @@
 				A401F7E5221453870047C89B /* SpriteWatchInterfaceUITests */,
 				A401F7F92214540E0047C89B /* mWatchFace */,
 				A401F8052214540F0047C89B /* mWatchFace Extension */,
+				A46218E22221436400EA3E6C /* WatchFace */,
+				A46218F32221436700EA3E6C /* WatchFaceTests */,
+				A46218FE2221436700EA3E6C /* WatchFaceUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -410,6 +579,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A46219192221A53900EA3E6C /* README.md in Resources */,
 				A46218DB221B13F800EA3E6C /* ProgressHUD.bundle in Resources */,
 				A401F7D0221453830047C89B /* Main.storyboard in Resources */,
 				A401F7D2221453870047C89B /* Assets.xcassets in Resources */,
@@ -447,6 +617,30 @@
 			buildActionMask = 2147483647;
 			files = (
 				A401F816221454100047C89B /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A46218E12221436400EA3E6C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A46218EA2221436700EA3E6C /* Assets.xcassets in Resources */,
+				A462190F2221440400EA3E6C /* Assets.xcassets in Resources */,
+				A46218ED2221436700EA3E6C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A46218F22221436700EA3E6C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A46218FD2221436700EA3E6C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -498,6 +692,36 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A46218DF2221436400EA3E6C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A462191222214E3A00EA3E6C /* BackgroundStyle.swift in Sources */,
+				A462191022214E3100EA3E6C /* FaceScene.swift in Sources */,
+				A46218E82221436400EA3E6C /* ViewController.swift in Sources */,
+				A462191722217F5700EA3E6C /* WindowController.swift in Sources */,
+				A462191122214E3800EA3E6C /* HandStyle.swift in Sources */,
+				A46218E62221436400EA3E6C /* AppDelegate.swift in Sources */,
+				A462191322214E3D00EA3E6C /* StyleOrganized.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A46218F02221436700EA3E6C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A46218F92221436700EA3E6C /* WatchFaceTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A46218FB2221436700EA3E6C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A46219042221436700EA3E6C /* WatchFaceUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -520,6 +744,16 @@
 			isa = PBXTargetDependency;
 			target = A401F7F92214540E0047C89B /* mWatchFace */;
 			targetProxy = A401F819221454100047C89B /* PBXContainerItemProxy */;
+		};
+		A46218F62221436700EA3E6C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A46218E22221436400EA3E6C /* WatchFace */;
+			targetProxy = A46218F52221436700EA3E6C /* PBXContainerItemProxy */;
+		};
+		A46219012221436700EA3E6C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A46218E22221436400EA3E6C /* WatchFace */;
+			targetProxy = A46219002221436700EA3E6C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -546,6 +780,14 @@
 				A401F7FD2214540E0047C89B /* Base */,
 			);
 			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
+		A46218EB2221436700EA3E6C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A46218EC2221436700EA3E6C /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -877,6 +1119,144 @@
 			};
 			name = Release;
 		};
+		A46219062221436700EA3E6C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = WatchFace/WatchFace.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = JXHZA4V3B7;
+				INFOPLIST_FILE = WatchFace/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				PRODUCT_BUNDLE_IDENTIFIER = JackLi.WatchFace;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 4.2;
+			};
+			name = Debug;
+		};
+		A46219072221436700EA3E6C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = WatchFace/WatchFace.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = JXHZA4V3B7;
+				INFOPLIST_FILE = WatchFace/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				PRODUCT_BUNDLE_IDENTIFIER = JackLi.WatchFace;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 4.2;
+			};
+			name = Release;
+		};
+		A46219082221436700EA3E6C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = JXHZA4V3B7;
+				INFOPLIST_FILE = WatchFaceTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				PRODUCT_BUNDLE_IDENTIFIER = JackLi.WatchFaceTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 4.2;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WatchFace.app/Contents/MacOS/WatchFace";
+			};
+			name = Debug;
+		};
+		A46219092221436700EA3E6C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = JXHZA4V3B7;
+				INFOPLIST_FILE = WatchFaceTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				PRODUCT_BUNDLE_IDENTIFIER = JackLi.WatchFaceTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 4.2;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WatchFace.app/Contents/MacOS/WatchFace";
+			};
+			name = Release;
+		};
+		A462190A2221436700EA3E6C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = JXHZA4V3B7;
+				INFOPLIST_FILE = WatchFaceUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				PRODUCT_BUNDLE_IDENTIFIER = JackLi.WatchFaceUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 4.2;
+				TEST_TARGET_NAME = WatchFace;
+			};
+			name = Debug;
+		};
+		A462190B2221436700EA3E6C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = JXHZA4V3B7;
+				INFOPLIST_FILE = WatchFaceUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				PRODUCT_BUNDLE_IDENTIFIER = JackLi.WatchFaceUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 4.2;
+				TEST_TARGET_NAME = WatchFace;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -930,6 +1310,33 @@
 			buildConfigurations = (
 				A401F821221454100047C89B /* Debug */,
 				A401F822221454100047C89B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A462190C2221436700EA3E6C /* Build configuration list for PBXNativeTarget "WatchFace" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A46219062221436700EA3E6C /* Debug */,
+				A46219072221436700EA3E6C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A462190D2221436700EA3E6C /* Build configuration list for PBXNativeTarget "WatchFaceTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A46219082221436700EA3E6C /* Debug */,
+				A46219092221436700EA3E6C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A462190E2221436700EA3E6C /* Build configuration list for PBXNativeTarget "WatchFaceUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A462190A2221436700EA3E6C /* Debug */,
+				A462190B2221436700EA3E6C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

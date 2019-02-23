@@ -70,8 +70,7 @@ class StyleOrganized
             backgroundPic.position = CGPoint(x: 0, y: 0)
             backgroundPic.setScale(0.8)
             scene.addChild(backgroundPic)
-            
-            let back = SKSpriteNode(color: UIColor(red: 0, green: 0, blue: 0, alpha: 1), size: CGSize(width: scene.frame.width, height: scene.frame.height))
+            let back = SKSpriteNode(color: SKColor(red: 0, green: 0, blue: 0, alpha: 1), size: CGSize(width: scene.frame.width, height: scene.frame.height))
             back.zPosition = -2
             scene.addChild(back)
         }
@@ -110,3 +109,4 @@ class StyleOrganized
         }
     }
 }
+
