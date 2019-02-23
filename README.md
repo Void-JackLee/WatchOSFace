@@ -10,11 +10,9 @@ Written with <img src="https://swift.org/assets/images/swift.svg" alt="Swift log
 ## 更新日志
 
 * 2019.2.22 Fixed the BAD ADRESS bug.
-
 修复指针错误导致的错误引用bug。
 
 * 2019.2.23 Add macOS support.
-
 添加macOS应用。
 
 
