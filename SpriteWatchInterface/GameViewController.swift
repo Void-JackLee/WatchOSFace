@@ -81,7 +81,7 @@ class GameViewController: UIViewController, WCSessionDelegate {
             if (self.session!.isReachable)
             {
                 self.sendMessage(session: self.session!, message: self.settings!, replyHandler: { (reply : [String : Any]) in
-                    self.showToast("设置成功")
+                    //self.showToast("设置成功")
                 })
             } else
             {

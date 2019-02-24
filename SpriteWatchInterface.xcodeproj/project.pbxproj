@@ -41,6 +41,7 @@
 		A462191322214E3D00EA3E6C /* StyleOrganized.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C45CDB2216E60A00B13CB8 /* StyleOrganized.swift */; };
 		A462191722217F5700EA3E6C /* WindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A462191622217F5700EA3E6C /* WindowController.swift */; };
 		A46219192221A53900EA3E6C /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = A46219182221A53900EA3E6C /* README.md */; };
+		A462191B2222D86600EA3E6C /* FaceSceneAddition.swift in Sources */ = {isa = PBXBuildFile; fileRef = A462191A2222D86600EA3E6C /* FaceSceneAddition.swift */; };
 		A4C45CDC2216E60A00B13CB8 /* StyleOrganized.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C45CDB2216E60A00B13CB8 /* StyleOrganized.swift */; };
 		A4C45CDD2216E6E700B13CB8 /* HandStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40EB9EB2215B2EB004C3009 /* HandStyle.swift */; };
 		A4C45CDE2216E6ED00B13CB8 /* BackgroundStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C45CD82215C3E300B13CB8 /* BackgroundStyle.swift */; };
@@ -169,6 +170,7 @@
 		A46219052221436700EA3E6C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A462191622217F5700EA3E6C /* WindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowController.swift; sourceTree = "<group>"; };
 		A46219182221A53900EA3E6C /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		A462191A2222D86600EA3E6C /* FaceSceneAddition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceSceneAddition.swift; sourceTree = "<group>"; };
 		A4C45CD82215C3E300B13CB8 /* BackgroundStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundStyle.swift; sourceTree = "<group>"; };
 		A4C45CDB2216E60A00B13CB8 /* StyleOrganized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleOrganized.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -334,6 +336,7 @@
 			isa = PBXGroup;
 			children = (
 				A46218E52221436400EA3E6C /* AppDelegate.swift */,
+				A462191A2222D86600EA3E6C /* FaceSceneAddition.swift */,
 				A46218E72221436400EA3E6C /* ViewController.swift */,
 				A46218E92221436700EA3E6C /* Assets.xcassets */,
 				A46218EB2221436700EA3E6C /* Main.storyboard */,
@@ -699,6 +702,7 @@
 				A462191222214E3A00EA3E6C /* BackgroundStyle.swift in Sources */,
 				A462191022214E3100EA3E6C /* FaceScene.swift in Sources */,
 				A46218E82221436400EA3E6C /* ViewController.swift in Sources */,
+				A462191B2222D86600EA3E6C /* FaceSceneAddition.swift in Sources */,
 				A462191722217F5700EA3E6C /* WindowController.swift in Sources */,
 				A462191122214E3800EA3E6C /* HandStyle.swift in Sources */,
 				A46218E62221436400EA3E6C /* AppDelegate.swift in Sources */,
@@ -915,7 +919,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = JXHZA4V3B7;
 				INFOPLIST_FILE = SpriteWatchInterface/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -936,7 +940,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = JXHZA4V3B7;
 				INFOPLIST_FILE = SpriteWatchInterface/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
