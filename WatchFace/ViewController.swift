@@ -9,13 +9,16 @@
 import Cocoa
 import SpriteKit
 
-class ViewController: NSViewController {
+class ViewController: NSViewController, NSWindowDelegate {
 
     let skView : SKView = SKView()
     var scene : FaceSceneAddition!
     
     let WIDTH_WINDOW = 312
     let HEIGHT_WINDOW = 390
+    
+    var currentX = (NSScreen.main?.frame.width ?? 0) / 2 - CGFloat(312 / 2)
+    var currentY = (NSScreen.main?.frame.height ?? 0) / 2 - CGFloat(290 / 2)
     
     
     var isOpenView = false
@@ -37,10 +40,13 @@ class ViewController: NSViewController {
         scene.setOnClick {
             if self.isOpenView
             {
-                
-                self.view.window?.setFrame(CGRect(x: (NSScreen.main?.frame.width ?? 0) / 2 - CGFloat(self.WIDTH_WINDOW / 2), y: (NSScreen.main?.frame.height ?? 0) / 2 - CGFloat(self.HEIGHT_WINDOW / 2), width: CGFloat(self.WIDTH_WINDOW), height: CGFloat(self.HEIGHT_WINDOW)), display: true, animate: true)
+                self.currentX = (self.view.window?.frame.minX ?? 0) + 200
+                self.currentY = self.view.window?.frame.minY ?? 0
+                self.view.window?.setFrame(CGRect(x: self.currentX, y: self.currentY, width: CGFloat(self.WIDTH_WINDOW), height: CGFloat(self.HEIGHT_WINDOW)), display: true, animate: true)
             } else{
-                self.view.window?.setFrame(CGRect(x: (NSScreen.main?.frame.width ?? 0) / 2 - CGFloat((self.WIDTH_WINDOW + 400) / 2), y: (NSScreen.main?.frame.height ?? 0) / 2 - CGFloat(self.HEIGHT_WINDOW / 2), width: CGFloat(self.WIDTH_WINDOW) + 400, height: CGFloat(self.HEIGHT_WINDOW)), display: true, animate: true)
+                self.currentX = (self.view.window?.frame.minX ?? 0) - 200
+                self.currentY = self.view.window?.frame.minY ?? 0
+                self.view.window?.setFrame(CGRect(x: self.currentX, y: self.currentY, width: CGFloat(self.WIDTH_WINDOW) + 400, height: CGFloat(self.HEIGHT_WINDOW)), display: true, animate: true)
             }
             self.isOpenView = !self.isOpenView
         }
@@ -62,7 +68,13 @@ class ViewController: NSViewController {
     override func viewDidAppear() {
         view.window?.styleMask.remove(.resizable)
         view.window?.title = "WatchFace on Mac"
-        self.view.window?.setFrame(CGRect(x: (NSScreen.main?.frame.width ?? 0) / 2 - CGFloat(self.WIDTH_WINDOW / 2), y: (NSScreen.main?.frame.height ?? 0) / 2 - CGFloat(self.HEIGHT_WINDOW / 2), width: CGFloat(self.WIDTH_WINDOW), height: CGFloat(self.HEIGHT_WINDOW)), display: true, animate: false)
+        view.window?.delegate = self
+        var width = WIDTH_WINDOW
+        if isOpenView
+        {
+            width += 400
+        }
+        self.view.window?.setFrame(CGRect(x: currentX, y: currentY, width: CGFloat(width), height: CGFloat(HEIGHT_WINDOW)), display: true, animate: false)
         skView.isPaused = true
         skView.isPaused = false
     }
@@ -73,5 +85,9 @@ class ViewController: NSViewController {
         }
     }
 
+    func windowDidMove(_ notification: Notification) {
+        self.currentX = self.view.window?.frame.minX ?? 0
+        self.currentY = self.view.window?.frame.minY ?? 0
+    }
 }
 
