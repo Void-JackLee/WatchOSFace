@@ -232,6 +232,7 @@
 			isa = PBXGroup;
 			children = (
 				A46219182221A53900EA3E6C /* README.md */,
+				A462195A2226D58E00EA3E6C /* CustomStyle */,
 				A40EB9EE2215B370004C3009 /* Styles */,
 				A401F7C3221453830047C89B /* SpriteWatchInterface */,
 				A401F7DE221453870047C89B /* SpriteWatchInterfaceTests */,
@@ -363,6 +364,13 @@
 				A46219052221436700EA3E6C /* Info.plist */,
 			);
 			path = WatchFaceUITests;
+			sourceTree = "<group>";
+		};
+		A462195A2226D58E00EA3E6C /* CustomStyle */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CustomStyle;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

@@ -23,9 +23,13 @@ class ViewController: NSViewController, NSWindowDelegate {
     
     var isOpenView = false
     
+    var titleBarHeight : CGFloat = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        
         
         skView.frame = CGRect(x: 0, y: 0, width: WIDTH_WINDOW, height: HEIGHT_WINDOW)
         skView.showsFPS = true
@@ -37,22 +41,34 @@ class ViewController: NSViewController, NSWindowDelegate {
         scene.scaleMode = .aspectFill
         skView.presentScene(scene)
         
+        
+        
         scene.setOnClick {
             if self.isOpenView
             {
                 self.currentX = (self.view.window?.frame.minX ?? 0) + 200
                 self.currentY = self.view.window?.frame.minY ?? 0
-                self.view.window?.setFrame(CGRect(x: self.currentX, y: self.currentY, width: CGFloat(self.WIDTH_WINDOW), height: CGFloat(self.HEIGHT_WINDOW)), display: true, animate: true)
+                self.view.window?.setFrame(CGRect(x: self.currentX, y: self.currentY, width: CGFloat(self.WIDTH_WINDOW), height: CGFloat(self.HEIGHT_WINDOW) + self.titleBarHeight), display: true, animate: true)
             } else{
                 self.currentX = (self.view.window?.frame.minX ?? 0) - 200
                 self.currentY = self.view.window?.frame.minY ?? 0
-                self.view.window?.setFrame(CGRect(x: self.currentX, y: self.currentY, width: CGFloat(self.WIDTH_WINDOW) + 400, height: CGFloat(self.HEIGHT_WINDOW)), display: true, animate: true)
+                self.view.window?.setFrame(CGRect(x: self.currentX, y: self.currentY, width: CGFloat(self.WIDTH_WINDOW) + 400, height: CGFloat(self.HEIGHT_WINDOW) + self.titleBarHeight), display: true, animate: true)
             }
             self.isOpenView = !self.isOpenView
         }
         
-        let tableView = NSTableView(frame: NSRect(x: WIDTH_WINDOW, y: 0, width: 400, height: HEIGHT_WINDOW))
-        view.addSubview(tableView)
+        let scrollerView = NSScrollView(frame: NSRect(x: WIDTH_WINDOW, y: 0, width: 400, height: HEIGHT_WINDOW))
+        let tableView = NSTableView()
+        let column = NSTableColumn(identifier: NSUserInterfaceItemIdentifier("a"))
+        column.title = "Test"
+        column.width = 100
+        tableView.addTableColumn(column)
+        
+        
+        scrollerView.contentView.documentView = tableView
+        view.addSubview(scrollerView)
+        
+        
         
         /*let btn = NSButton(frame: NSRect(x: 0, y: 0, width: 100, height: 50))
         btn.action = #selector(click)
@@ -66,6 +82,8 @@ class ViewController: NSViewController, NSWindowDelegate {
     }*/
     
     override func viewDidAppear() {
+        titleBarHeight = view.window!.frame.height - view.frame.height
+        
         view.window?.styleMask.remove(.resizable)
         view.window?.title = "WatchFace on Mac"
         view.window?.delegate = self
@@ -74,7 +92,7 @@ class ViewController: NSViewController, NSWindowDelegate {
         {
             width += 400
         }
-        self.view.window?.setFrame(CGRect(x: currentX, y: currentY, width: CGFloat(width), height: CGFloat(HEIGHT_WINDOW)), display: true, animate: false)
+        self.view.window?.setFrame(CGRect(x: currentX, y: currentY, width: CGFloat(width), height: CGFloat(HEIGHT_WINDOW) + titleBarHeight), display: true, animate: false)
         skView.isPaused = true
         skView.isPaused = false
     }
