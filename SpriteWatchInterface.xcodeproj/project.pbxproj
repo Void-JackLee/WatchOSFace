@@ -171,6 +171,7 @@
 		A462191622217F5700EA3E6C /* WindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowController.swift; sourceTree = "<group>"; };
 		A46219182221A53900EA3E6C /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		A462191A2222D86600EA3E6C /* FaceSceneAddition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceSceneAddition.swift; sourceTree = "<group>"; };
+		A47A311D22747CF800577962 /* README_CN.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README_CN.md; sourceTree = "<group>"; };
 		A4C45CD82215C3E300B13CB8 /* BackgroundStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundStyle.swift; sourceTree = "<group>"; };
 		A4C45CDB2216E60A00B13CB8 /* StyleOrganized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleOrganized.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -231,6 +232,7 @@
 		A401F7B8221453830047C89B = {
 			isa = PBXGroup;
 			children = (
+				A47A311D22747CF800577962 /* README_CN.md */,
 				A46219182221A53900EA3E6C /* README.md */,
 				A462195A2226D58E00EA3E6C /* CustomStyle */,
 				A40EB9EE2215B370004C3009 /* Styles */,
@@ -549,13 +551,16 @@
 					};
 					A46218E22221436400EA3E6C = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 					};
 					A46218F32221436700EA3E6C = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 						TestTargetID = A46218E22221436400EA3E6C;
 					};
 					A46218FE2221436700EA3E6C = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 						TestTargetID = A46218E22221436400EA3E6C;
 					};
 				};
@@ -1050,7 +1055,7 @@
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = JXHZA4V3B7;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "mWatchFace Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1075,7 +1080,7 @@
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = JXHZA4V3B7;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "mWatchFace Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1149,7 +1154,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = JackLi.WatchFace;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -1171,7 +1176,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = JackLi.WatchFace;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -1194,7 +1199,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = JackLi.WatchFaceTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WatchFace.app/Contents/MacOS/WatchFace";
 			};
 			name = Debug;
@@ -1218,7 +1223,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = JackLi.WatchFaceTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WatchFace.app/Contents/MacOS/WatchFace";
 			};
 			name = Release;
@@ -1241,7 +1246,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = JackLi.WatchFaceUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TEST_TARGET_NAME = WatchFace;
 			};
 			name = Debug;
@@ -1264,7 +1269,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = JackLi.WatchFaceUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TEST_TARGET_NAME = WatchFace;
 			};
 			name = Release;
