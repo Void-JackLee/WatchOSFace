@@ -24,12 +24,22 @@
 		A401F816221454100047C89B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A401F815221454100047C89B /* Assets.xcassets */; };
 		A401F81B221454100047C89B /* mWatchFace.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = A401F7FA2214540E0047C89B /* mWatchFace.app */; };
 		A401F827221457B90047C89B /* HideStatu.m in Sources */ = {isa = PBXBuildFile; fileRef = A401F825221457B80047C89B /* HideStatu.m */; };
+		A4293EED22B69713002587F1 /* CustomTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4293EEC22B69713002587F1 /* CustomTheme.swift */; };
+		A4293EEE22B69D3A002587F1 /* CustomTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4293EEC22B69713002587F1 /* CustomTheme.swift */; };
+		A4293EEF22B69D3F002587F1 /* CustomTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4293EEC22B69713002587F1 /* CustomTheme.swift */; };
+		A4293F0B22B75C87002587F1 /* EasyMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4293EAA22B64610002587F1 /* EasyMethod.swift */; };
+		A4293F3122BA01E1002587F1 /* Wildcard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4293F3022BA01E0002587F1 /* Wildcard.swift */; };
+		A4293F3222BA01E1002587F1 /* Wildcard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4293F3022BA01E0002587F1 /* Wildcard.swift */; };
+		A4293F3322BA01E1002587F1 /* Wildcard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4293F3022BA01E0002587F1 /* Wildcard.swift */; };
+		A4293F3922BA8D97002587F1 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4293F3822BA8D97002587F1 /* File.swift */; };
+		A4293F3A22BA8DF3002587F1 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4293F3822BA8D97002587F1 /* File.swift */; };
+		A4293F3B22BA8DF5002587F1 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4293F3822BA8D97002587F1 /* File.swift */; };
 		A46218DB221B13F800EA3E6C /* ProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A46218D8221B13F800EA3E6C /* ProgressHUD.bundle */; };
 		A46218DC221B13F800EA3E6C /* ProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = A46218DA221B13F800EA3E6C /* ProgressHUD.m */; };
 		A46218DD221BCAAE00EA3E6C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A401F815221454100047C89B /* Assets.xcassets */; };
 		A46218DE221BCAD400EA3E6C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A401F815221454100047C89B /* Assets.xcassets */; };
 		A46218E62221436400EA3E6C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46218E52221436400EA3E6C /* AppDelegate.swift */; };
-		A46218E82221436400EA3E6C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46218E72221436400EA3E6C /* ViewController.swift */; };
+		A46218E82221436400EA3E6C /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46218E72221436400EA3E6C /* MainViewController.swift */; };
 		A46218EA2221436700EA3E6C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A46218E92221436700EA3E6C /* Assets.xcassets */; };
 		A46218ED2221436700EA3E6C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A46218EB2221436700EA3E6C /* Main.storyboard */; };
 		A46218F92221436700EA3E6C /* WatchFaceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46218F82221436700EA3E6C /* WatchFaceTests.swift */; };
@@ -39,9 +49,12 @@
 		A462191122214E3800EA3E6C /* HandStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40EB9EB2215B2EB004C3009 /* HandStyle.swift */; };
 		A462191222214E3A00EA3E6C /* BackgroundStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C45CD82215C3E300B13CB8 /* BackgroundStyle.swift */; };
 		A462191322214E3D00EA3E6C /* StyleOrganized.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C45CDB2216E60A00B13CB8 /* StyleOrganized.swift */; };
-		A462191722217F5700EA3E6C /* WindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A462191622217F5700EA3E6C /* WindowController.swift */; };
-		A46219192221A53900EA3E6C /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = A46219182221A53900EA3E6C /* README.md */; };
+		A462191722217F5700EA3E6C /* MainWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A462191622217F5700EA3E6C /* MainWindowController.swift */; };
 		A462191B2222D86600EA3E6C /* FaceSceneAddition.swift in Sources */ = {isa = PBXBuildFile; fileRef = A462191A2222D86600EA3E6C /* FaceSceneAddition.swift */; };
+		A4A30C9E22B5FD0A00A7E5BF /* AddNameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A30C9D22B5FD0A00A7E5BF /* AddNameController.swift */; };
+		A4B096EC22B3F34B00FA492E /* AddWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B096EB22B3F34B00FA492E /* AddWindowController.swift */; };
+		A4B096EF22B3F37900FA492E /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B096ED22B3F37900FA492E /* AddViewController.swift */; };
+		A4B0972A22B53CD200FA492E /* ElementAddingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B0972922B53CD200FA492E /* ElementAddingViewController.swift */; };
 		A4C45CDC2216E60A00B13CB8 /* StyleOrganized.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C45CDB2216E60A00B13CB8 /* StyleOrganized.swift */; };
 		A4C45CDD2216E6E700B13CB8 /* HandStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40EB9EB2215B2EB004C3009 /* HandStyle.swift */; };
 		A4C45CDE2216E6ED00B13CB8 /* BackgroundStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C45CD82215C3E300B13CB8 /* BackgroundStyle.swift */; };
@@ -151,13 +164,17 @@
 		A401F825221457B80047C89B /* HideStatu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HideStatu.m; sourceTree = "<group>"; };
 		A401F826221457B80047C89B /* HideStatu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HideStatu.h; sourceTree = "<group>"; };
 		A40EB9EB2215B2EB004C3009 /* HandStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandStyle.swift; sourceTree = "<group>"; };
+		A4293EAA22B64610002587F1 /* EasyMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EasyMethod.swift; sourceTree = "<group>"; };
+		A4293EEC22B69713002587F1 /* CustomTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTheme.swift; sourceTree = "<group>"; };
+		A4293F3022BA01E0002587F1 /* Wildcard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Wildcard.swift; sourceTree = "<group>"; };
+		A4293F3822BA8D97002587F1 /* File.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		A46218D7221B13F600EA3E6C /* SpriteWatchInterface-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SpriteWatchInterface-Bridging-Header.h"; sourceTree = "<group>"; };
 		A46218D8221B13F800EA3E6C /* ProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ProgressHUD.bundle; sourceTree = "<group>"; };
 		A46218D9221B13F800EA3E6C /* ProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgressHUD.h; sourceTree = "<group>"; };
 		A46218DA221B13F800EA3E6C /* ProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressHUD.m; sourceTree = "<group>"; };
 		A46218E32221436400EA3E6C /* WatchFace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WatchFace.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A46218E52221436400EA3E6C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A46218E72221436400EA3E6C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A46218E72221436400EA3E6C /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		A46218E92221436700EA3E6C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A46218EC2221436700EA3E6C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A46218EE2221436700EA3E6C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -168,10 +185,14 @@
 		A46218FF2221436700EA3E6C /* WatchFaceUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WatchFaceUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A46219032221436700EA3E6C /* WatchFaceUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchFaceUITests.swift; sourceTree = "<group>"; };
 		A46219052221436700EA3E6C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A462191622217F5700EA3E6C /* WindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowController.swift; sourceTree = "<group>"; };
+		A462191622217F5700EA3E6C /* MainWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainWindowController.swift; sourceTree = "<group>"; };
 		A46219182221A53900EA3E6C /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		A462191A2222D86600EA3E6C /* FaceSceneAddition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceSceneAddition.swift; sourceTree = "<group>"; };
 		A47A311D22747CF800577962 /* README_CN.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README_CN.md; sourceTree = "<group>"; };
+		A4A30C9D22B5FD0A00A7E5BF /* AddNameController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNameController.swift; sourceTree = "<group>"; };
+		A4B096EB22B3F34B00FA492E /* AddWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWindowController.swift; sourceTree = "<group>"; };
+		A4B096ED22B3F37900FA492E /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
+		A4B0972922B53CD200FA492E /* ElementAddingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementAddingViewController.swift; sourceTree = "<group>"; };
 		A4C45CD82215C3E300B13CB8 /* BackgroundStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundStyle.swift; sourceTree = "<group>"; };
 		A4C45CDB2216E60A00B13CB8 /* StyleOrganized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleOrganized.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -234,6 +255,7 @@
 			children = (
 				A47A311D22747CF800577962 /* README_CN.md */,
 				A46219182221A53900EA3E6C /* README.md */,
+				A4293F0522B758A7002587F1 /* Utils */,
 				A462195A2226D58E00EA3E6C /* CustomStyle */,
 				A40EB9EE2215B370004C3009 /* Styles */,
 				A401F7C3221453830047C89B /* SpriteWatchInterface */,
@@ -335,17 +357,31 @@
 			path = Styles;
 			sourceTree = "<group>";
 		};
+		A4293F0522B758A7002587F1 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				A4293F3022BA01E0002587F1 /* Wildcard.swift */,
+				A4293F3822BA8D97002587F1 /* File.swift */,
+				A4293EAA22B64610002587F1 /* EasyMethod.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		A46218E42221436400EA3E6C /* WatchFace */ = {
 			isa = PBXGroup;
 			children = (
 				A46218E52221436400EA3E6C /* AppDelegate.swift */,
 				A462191A2222D86600EA3E6C /* FaceSceneAddition.swift */,
-				A46218E72221436400EA3E6C /* ViewController.swift */,
+				A46218E72221436400EA3E6C /* MainViewController.swift */,
+				A462191622217F5700EA3E6C /* MainWindowController.swift */,
+				A4A30C9D22B5FD0A00A7E5BF /* AddNameController.swift */,
 				A46218E92221436700EA3E6C /* Assets.xcassets */,
 				A46218EB2221436700EA3E6C /* Main.storyboard */,
 				A46218EE2221436700EA3E6C /* Info.plist */,
 				A46218EF2221436700EA3E6C /* WatchFace.entitlements */,
-				A462191622217F5700EA3E6C /* WindowController.swift */,
+				A4B096EB22B3F34B00FA492E /* AddWindowController.swift */,
+				A4B096ED22B3F37900FA492E /* AddViewController.swift */,
+				A4B0972922B53CD200FA492E /* ElementAddingViewController.swift */,
 			);
 			path = WatchFace;
 			sourceTree = "<group>";
@@ -371,6 +407,7 @@
 		A462195A2226D58E00EA3E6C /* CustomStyle */ = {
 			isa = PBXGroup;
 			children = (
+				A4293EEC22B69713002587F1 /* CustomTheme.swift */,
 			);
 			path = CustomStyle;
 			sourceTree = "<group>";
@@ -527,7 +564,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1010;
-				LastUpgradeCheck = 1010;
+				LastUpgradeCheck = 1100;
 				ORGANIZATIONNAME = "李弘辰";
 				TargetAttributes = {
 					A401F7C0221453830047C89B = {
@@ -544,6 +581,7 @@
 					};
 					A401F7F92214540E0047C89B = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1100;
 					};
 					A401F8052214540F0047C89B = {
 						CreatedOnToolsVersion = 10.1;
@@ -595,7 +633,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A46219192221A53900EA3E6C /* README.md in Resources */,
 				A46218DB221B13F800EA3E6C /* ProgressHUD.bundle in Resources */,
 				A401F7D0221453830047C89B /* Main.storyboard in Resources */,
 				A401F7D2221453870047C89B /* Assets.xcassets in Resources */,
@@ -669,10 +706,13 @@
 			files = (
 				A4C45CDD2216E6E700B13CB8 /* HandStyle.swift in Sources */,
 				A4C45CDE2216E6ED00B13CB8 /* BackgroundStyle.swift in Sources */,
+				A4293EED22B69713002587F1 /* CustomTheme.swift in Sources */,
 				A401F7CD221453830047C89B /* GameViewController.swift in Sources */,
 				A46218DC221B13F800EA3E6C /* ProgressHUD.m in Sources */,
+				A4293F3922BA8D97002587F1 /* File.swift in Sources */,
 				A401F7C5221453830047C89B /* AppDelegate.swift in Sources */,
 				A4C45CE5221718BE00B13CB8 /* FaceScene.swift in Sources */,
+				A4293F3122BA01E1002587F1 /* Wildcard.swift in Sources */,
 				A4C45CDC2216E60A00B13CB8 /* StyleOrganized.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -702,8 +742,11 @@
 				A401F8102214540F0047C89B /* FaceScene.swift in Sources */,
 				A4C45CE32216E76100B13CB8 /* HandStyle.swift in Sources */,
 				A401F80C2214540F0047C89B /* InterfaceController.swift in Sources */,
+				A4293F3222BA01E1002587F1 /* Wildcard.swift in Sources */,
 				A401F8142214540F0047C89B /* NotificationController.swift in Sources */,
+				A4293EEF22B69D3F002587F1 /* CustomTheme.swift in Sources */,
 				A401F8122214540F0047C89B /* ExtensionDelegate.swift in Sources */,
+				A4293F3A22BA8DF3002587F1 /* File.swift in Sources */,
 				A4C45CE22216E70C00B13CB8 /* StyleOrganized.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -712,13 +755,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4293EEE22B69D3A002587F1 /* CustomTheme.swift in Sources */,
+				A4B096EF22B3F37900FA492E /* AddViewController.swift in Sources */,
+				A4293F0B22B75C87002587F1 /* EasyMethod.swift in Sources */,
+				A4293F3322BA01E1002587F1 /* Wildcard.swift in Sources */,
 				A462191222214E3A00EA3E6C /* BackgroundStyle.swift in Sources */,
+				A4293F3B22BA8DF5002587F1 /* File.swift in Sources */,
 				A462191022214E3100EA3E6C /* FaceScene.swift in Sources */,
-				A46218E82221436400EA3E6C /* ViewController.swift in Sources */,
+				A4B0972A22B53CD200FA492E /* ElementAddingViewController.swift in Sources */,
+				A46218E82221436400EA3E6C /* MainViewController.swift in Sources */,
 				A462191B2222D86600EA3E6C /* FaceSceneAddition.swift in Sources */,
-				A462191722217F5700EA3E6C /* WindowController.swift in Sources */,
+				A462191722217F5700EA3E6C /* MainWindowController.swift in Sources */,
 				A462191122214E3800EA3E6C /* HandStyle.swift in Sources */,
+				A4A30C9E22B5FD0A00A7E5BF /* AddNameController.swift in Sources */,
 				A46218E62221436400EA3E6C /* AppDelegate.swift in Sources */,
+				A4B096EC22B3F34B00FA492E /* AddWindowController.swift in Sources */,
 				A462191322214E3D00EA3E6C /* StyleOrganized.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1103,14 +1154,21 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JXHZA4V3B7;
 				IBSC_MODULE = mWatchFace_Extension;
 				INFOPLIST_FILE = mWatchFace/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = JackLi.SpriteWatchInterface.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 5.1;
@@ -1122,10 +1180,16 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JXHZA4V3B7;
 				IBSC_MODULE = mWatchFace_Extension;
 				INFOPLIST_FILE = mWatchFace/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = JackLi.SpriteWatchInterface.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
@@ -1145,6 +1209,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = JXHZA4V3B7;
+				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = WatchFace/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1167,6 +1232,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = JXHZA4V3B7;
+				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = WatchFace/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

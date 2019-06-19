@@ -2,8 +2,8 @@
 //  AppDelegate.swift
 //  SpriteWatchInterface
 //
-//  Created by Jack Li on 2019/2/13.
-//  Copyright © 2019 Jack Li. All rights reserved.
+//  Created by 李弘辰 on 2019/2/13.
+//  Copyright © 2019 李弘辰. All rights reserved.
 //
 //  This program is free software; you can redistribute it and/or modify
 //  it under the terms of the GNU General Public License as published by

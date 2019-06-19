@@ -2,7 +2,7 @@
 //  HideStatu.h
 //  SpriteKitTest
 //
-//  Created by Jack Li on 2019/2/10.
+//  Created by 李弘辰 on 2019/2/10.
 //  Copyright © 2019 Steven Troughton-Smith. All rights reserved.
 //
 
