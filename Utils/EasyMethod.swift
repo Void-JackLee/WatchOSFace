@@ -1,8 +1,8 @@
 //
-//  WindowController.swift
+//  EasyMethod.swift
 //  WatchFace
 //
-//  Created by 李弘辰 on 2019/2/23.
+//  Created by 李弘辰 on 2019/6/16.
 //  Copyright © 2019 李弘辰. All rights reserved.
 //
 //  This program is free software; you can redistribute it and/or modify
@@ -23,10 +23,17 @@
 import Foundation
 import Cocoa
 
-class WindowController : NSWindowController
+class EasyMethod
 {
-    override func windowDidLoad() {
-        super.windowDidLoad()
-        
+    static func caughtError(_ error : Error) {
+        showAlert("Error! File die! \(error.localizedDescription)", .critical)
+    }
+    
+    static func showAlert(_ str : String, _ style : NSAlert.Style)
+    {
+        let alert : NSAlert = NSAlert()
+        alert.alertStyle = style
+        alert.messageText = str
+        alert.runModal()
     }
 }
