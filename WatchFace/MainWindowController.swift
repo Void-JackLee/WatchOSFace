@@ -26,12 +26,15 @@ import CoreGraphics
 
 class MainWindowController : NSWindowController
 {
-    @IBOutlet weak var addButton: NSButtonCell!
+    
+    @IBOutlet weak var addButton: NSButton!
+    @IBOutlet weak var freshButton: NSButton!
     @IBOutlet weak var titleLabel: NSTextFieldCell!
     
     let defaultPath = File(path: "~/SpriteClock")
     
-    var buttonImage : NSImage?
+    let item_add = NSTouchBarItem.Identifier(rawValue: "item_theme_add"), item_fresh = NSTouchBarItem.Identifier(rawValue: "item_theme_fresh"), item_expand = NSTouchBarItem.Identifier(rawValue: "item_expand_window")
+    let expandButton = NSButton(image: NSImage(named: NSImage.Name("NSGoRightTemplate"))!, target: self, action: #selector(changeSize))
     
     override func windowDidLoad() {
         super.windowDidLoad()
@@ -43,28 +46,27 @@ class MainWindowController : NSWindowController
         //window?.titlebarAppearsTransparent = true
         titleLabel.title = "WatchFace on Mac"
         
-        // Init adding button condition
-        buttonImage = addButton.image
-        addButton.image = nil
-        addButton.isBordered = false
-        addButton.isEnabled = false
-        
         // Receive window transform condition
         NotificationCenter.default.addObserver(self, selector: #selector(change), name: Notification.Name("isOpen"), object: nil) //obj是发送对象
+        // Receive fresh list command
+        NotificationCenter.default.addObserver(self, selector: #selector(freshList), name: Notification.Name("list_fresh"), object: nil) //obj是发送对象
     }
     
     @objc func change(notification : Notification)
     {
         // Change adding button condition
         let isOpen = notification.object as! Bool
-        addButton.isEnabled = isOpen
         if isOpen
         {
-            addButton.image = buttonImage
-            addButton.isBordered = true
-        }else{
-            addButton.image = nil
-            addButton.isBordered = false
+            window?.toolbar?.insertItem(withItemIdentifier: NSToolbarItem.Identifier("item_fresh"), at: 2)
+            window?.toolbar?.insertItem(withItemIdentifier: NSToolbarItem.Identifier("item_add"), at: 3)
+            freshList(notification)
+            expandButton.image = NSImage(named: NSImage.Name("NSGoLeftTemplate"))!
+        } else
+        {
+            window?.toolbar?.removeItem(at: 2)
+            window?.toolbar?.removeItem(at: 2)
+            expandButton.image = NSImage(named: NSImage.Name("NSGoRightTemplate"))!
         }
     }
     
@@ -89,59 +91,33 @@ class MainWindowController : NSWindowController
             }
             if hasTmp
             {
-                var has_ = false
-                var i = 0
-                for c in tmpName!
+                do
                 {
-                    if c == "_"
+                    // Read theme
+                    let theme = try CustomTheme.read(themeDir: self.defaultPath.append(childName: tmpName!))
+                    let name = theme.name
+                    // Show tip
+                    let alert : NSAlert = NSAlert()
+                    alert.alertStyle = .informational
+                    alert.messageText = "Found unsaved theme \"\(name)\", do you want to continue your work?"
+                    alert.addButton(withTitle: "Continue")
+                    alert.addButton(withTitle: "Create new theme")
+                    let type = alert.runModal()
+                    if type == .alertSecondButtonReturn
                     {
-                        if !has_
-                        {
-                            has_ = true
-                        } else
-                        {
-                            break
-                        }
+                        // Create new
+                        self.popupAddingNameView(controller: addingController)
                     }
-                    i = i + 1
-                }
-                let name = String(tmpName!.suffix(tmpName!.count - i - 1))
-                // Show tip
-                let alert : NSAlert = NSAlert()
-                alert.alertStyle = .informational
-                alert.messageText = "Found unsaved theme \"\(name)\", do you want to continue your work?"
-                alert.addButton(withTitle: "Continue")
-                alert.addButton(withTitle: "Create new theme")
-                let type = alert.runModal()
-                if type == .alertSecondButtonReturn
-                {
-                    // Create new
-                    self.popupAddingNameView(controller: addingController)
-                }
-                if type == .alertFirstButtonReturn
-                {
-                    do
+                    if type == .alertFirstButtonReturn
                     {
-                        // Read theme
-                        let theme = try CustomTheme.read(themeDir: self.defaultPath.append(childName: tmpName!))
                         // Continue edit temporary theme, jump to editor
                         addingController.performSegue(withIdentifier: NSStoryboardSegue.Identifier("jump_element_adding"), sender: theme)
-                    } catch
-                    {
-                        if let e = error as? ThemeError
-                        {
-                            switch e {
-                            case .DirectoryError:
-                                EasyMethod.showAlert("Something wrong with theme directory.", .critical)
-                            case .InformationFileError:
-                                EasyMethod.showAlert("Theme's information.plist has some problems.", .critical)
-                            case .FileNotFound:
-                                EasyMethod.showAlert("\"\(tmpName!)\" Not found!", .critical)
-                            default:
-                                EasyMethod.caughtError(error)
-                            }
-                        } else { EasyMethod.caughtError(error) }
                     }
+                } catch
+                {
+                    print(error)
+                    // No temporary theme, create new
+                    popupAddingNameView(controller: addingController)
                 }
             } else {
                 // No temporary theme, create new
@@ -177,11 +153,81 @@ class MainWindowController : NSWindowController
         let popover = NSPopover()
         popover.contentViewController = controller
         popover.behavior = .transient
-        popover.show(relativeTo: addButton.controlView!.bounds, of: addButton.controlView!, preferredEdge: NSRectEdge.maxY)
+        popover.show(relativeTo: addButton.bounds, of: addButton, preferredEdge: NSRectEdge.maxY)
+    }
+    
+    
+    @IBAction func freshList(_ sender: Any) {
+        (window?.contentViewController as! MainViewController).initData()
     }
     
     deinit {
         NotificationCenter.default.removeObserver(self, name: Notification.Name("isOpen"), object: nil)
+        NotificationCenter.default.removeObserver(self, name: Notification.Name("list_fresh"), object: nil)
+    }
+    
+}
+
+@available(OSX 10.12.2, *)
+extension MainWindowController : NSTouchBarDelegate
+{
+    override func makeTouchBar() -> NSTouchBar? {
+        let touchbar = NSTouchBar()
+        touchbar.customizationIdentifier = NSTouchBar.CustomizationIdentifier("main")
+        
+        touchbar.defaultItemIdentifiers = [item_expand, item_fresh, item_add]
+        touchbar.customizationAllowedItemIdentifiers = [item_expand, item_fresh, item_add]
+        
+        touchbar.delegate = self
+        return touchbar
+    }
+    
+    func touchBar(_ touchBar: NSTouchBar, makeItemForIdentifier identifier: NSTouchBarItem.Identifier) -> NSTouchBarItem? {
+        let item = NSCustomTouchBarItem(identifier: identifier)
+        var itemDescription = ""
+        switch identifier {
+        case item_add:
+            itemDescription = "Fresh List Button"
+            item.view = NSButton(image: NSImage(named: NSImage.Name("NSAddTemplate"))!, target: self, action: #selector(touchAdd))
+        case item_fresh:
+            itemDescription = "Add button"
+            item.view = NSButton(image: NSImage(named: NSImage.Name("NSRefreshTemplate"))!, target: self, action: #selector(touchFresh))
+        case item_expand:
+            itemDescription = "Add button"
+            item.view = expandButton
+        default:
+            print("???")
+        }
+        item.customizationLabel = itemDescription
+        return item
+    }
+    
+    @objc func changeSize()
+    {
+        let viewController = (window!.contentViewController! as! MainViewController)
+        let isOpen = viewController.isOpenView
+        viewController.changeSize(isOpen: !isOpen)
+    }
+    
+    @objc func touchAdd()
+    {
+        openExtraWindow()
+        addAction(self)
+    }
+    
+    @objc func touchFresh()
+    {
+        openExtraWindow()
+        freshList(self)
+    }
+    
+    func openExtraWindow()
+    {
+        let viewController = (window!.contentViewController! as! MainViewController)
+        if !viewController.isOpenView
+        {
+            viewController.changeSize(isOpen: true)
+        }
     }
     
 }

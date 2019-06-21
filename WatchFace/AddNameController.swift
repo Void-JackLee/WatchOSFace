@@ -27,7 +27,6 @@ class AddNameController: NSViewController {
     @IBOutlet weak var titleField: NSTextField!
     
     let defaultPath = File(path: "~/SpriteClock")
-    //let fileManager = FileManager.default
     
     override func prepare(for segue: NSStoryboardSegue, sender: Any?) {
         (segue.destinationController as! NSWindowController).prepare(for: segue, sender: sender)
@@ -35,30 +34,34 @@ class AddNameController: NSViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
     
     @IBAction func OKAction(_ sender: Any) {
         
         let name = titleField.stringValue
+        var dirName = name
         if name == ""
         {
             EasyMethod.showAlert("Name can't be empty!", .critical)
         } else
         {
-            if name.contains(" ") || name.contains("/") || name.contains(".") || name.contains("*") || name.contains("?") || name.contains("#")
+            if name.contains("/") || name.contains(".") || name.contains("*") || name.contains("?") || name.contains("#")
             {
-                EasyMethod.showAlert("Name can't contain \" \", ?, *, #, . or /", .critical)
+                EasyMethod.showAlert("Name can't contain ?*#./", .critical)
             } else
             {
+                if dirName.contains(" ")
+                {
+                    dirName = dirName.replacingOccurrences(of: " ", with: "_")
+                }
                 // Create new theme
                 do
                 {
                     // 1. Delete origin temporary theme directory
                     let _ = try defaultPath.delete(childName: "tmp_*", hasWildcard: true)
                     // 2. Write information.plist
-                    let theme = CustomTheme(name: name, time: String(Date().timeIntervalSince1970), rootDir: defaultPath)
-                    try theme.write(isFirstTmp: true)
+                    let theme = CustomTheme(name: name, time: String(Date().timeIntervalSince1970), rootDir: defaultPath, themeDirName: dirName)
+                    try theme.write()
                     // 3. Jump to editor, and send object
                     performSegue(withIdentifier: NSStoryboardSegue.Identifier("jump_element_adding"), sender: theme)
                 } catch

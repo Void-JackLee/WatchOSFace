@@ -23,7 +23,7 @@
 import Cocoa
 import SpriteKit
 
-class MainViewController: NSViewController, NSWindowDelegate, NSTableViewDataSource, NSTableViewDelegate {
+class MainViewController: NSViewController, NSWindowDelegate {
 
     let skView : SKView = SKView()
     var scene : FaceSceneAddition!
@@ -46,6 +46,7 @@ class MainViewController: NSViewController, NSWindowDelegate, NSTableViewDataSou
     
     var isInit = true
     
+    let defaultPath = File(path: "~/SpriteClock")
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,9 +55,6 @@ class MainViewController: NSViewController, NSWindowDelegate, NSTableViewDataSou
         visualEffectView.blendingMode = NSVisualEffectView.BlendingMode.behindWindow
         visualEffectView.state = NSVisualEffectView.State.active
         view.addSubview(visualEffectView)
-        
-        // Set test data
-        data = ["Theme1","Theme2","Theme3"]
         
         // Present clock
         skView.frame = CGRect(x: 0, y: 0, width: WIDTH_VIEW, height: HEIGHT_VIEW)
@@ -69,67 +67,17 @@ class MainViewController: NSViewController, NSWindowDelegate, NSTableViewDataSou
         scene.scaleMode = .aspectFill
         skView.presentScene(scene)
         
-        
         // Transform window
         scene.setOnClick {
-            if self.isOpenView
-            {
-                self.currentX = (self.view.window?.frame.minX ?? 0) + CGFloat(self.WIDTH_EXTRA) / 2
-                self.currentY = self.view.window?.frame.minY ?? 0
-                self.view.window?.setFrame(CGRect(x: self.currentX, y: self.currentY, width: CGFloat(self.WIDTH_VIEW), height: CGFloat(self.HEIGHT_VIEW) + self.titleBarHeight), display: true, animate: true)
-            } else{
-                self.currentX = (self.view.window?.frame.minX ?? 0) - CGFloat(self.WIDTH_EXTRA) / 2
-                self.currentY = self.view.window?.frame.minY ?? 0
-                self.view.window?.setFrame(CGRect(x: self.currentX, y: self.currentY, width: CGFloat(self.WIDTH_VIEW + self.WIDTH_EXTRA), height: CGFloat(self.HEIGHT_VIEW) + self.titleBarHeight), display: true, animate: true)
-            }
-            self.isOpenView = !self.isOpenView
-            
-            // Send message to tell window controller update adding button condition
-            NotificationCenter.default.post(name: NSNotification.Name("isOpen"), object: self.isOpenView)
+            self.changeSize(isOpen: !self.isOpenView)
         }
         
-        // Init tableView
-        let scrollerView = NSScrollView(frame: NSRect(x: WIDTH_VIEW, y: 0, width: Int(WIDTH_EXTRA), height: HEIGHT_VIEW))
-        
-        // Add column
-        let column = NSTableColumn(identifier: NSUserInterfaceItemIdentifier("0"))
-        column.title = "Themes"
-        column.width = scrollerView.frame.width
-        column.maxWidth = column.width
-        column.minWidth = column.width
-        column.isEditable = false
-        
-        tableView.addTableColumn(column)
-        
-        // Set delegates
-        tableView.dataSource = self
-        tableView.delegate = self
-        
-        // Make backgrounds clear
-        tableView.backgroundColor = NSColor.clear
-        scrollerView.drawsBackground = false
-        
-        // Set tableView
-        scrollerView.documentView = tableView
-        scrollerView.hasVerticalScroller = true
-        view.addSubview(scrollerView)
-        
-    
+        initTableView()
         
         /*let btn = NSButton(frame: NSRect(x: 0, y: 0, width: 100, height: 50))
         btn.action = #selector(click)
         view.addSubview(btn)*/
         
-    }
-    
-    // Achieve data source
-    func numberOfRows(in tableView: NSTableView) -> Int {
-        return data?.count ?? 0
-    }
-    
-    func tableView(_ tableView: NSTableView, objectValueFor tableColumn: NSTableColumn?, row: Int) -> Any? {
-        //print("\(tableView.editedColumn),\(tableView.editedRow)")
-        return data![row]
     }
     
     override func viewDidAppear() {
@@ -175,5 +123,78 @@ class MainViewController: NSViewController, NSWindowDelegate, NSTableViewDataSou
         self.currentX = self.view.window?.frame.minX ?? 0
         self.currentY = self.view.window?.frame.minY ?? 0
     }
+    
+    func changeSize(isOpen : Bool)
+    {
+        if !isOpen
+        {
+            currentX = (view.window?.frame.minX ?? 0) + CGFloat(WIDTH_EXTRA) / 2
+            currentY = view.window?.frame.minY ?? 0
+            view.window?.setFrame(CGRect(x: currentX, y: currentY, width: CGFloat(WIDTH_VIEW), height: CGFloat(HEIGHT_VIEW) + titleBarHeight), display: true, animate: true)
+        } else {
+            currentX = (view.window?.frame.minX ?? 0) - CGFloat(WIDTH_EXTRA) / 2
+            currentY = view.window?.frame.minY ?? 0
+            view.window?.setFrame(CGRect(x: currentX, y: currentY, width: CGFloat(WIDTH_VIEW + WIDTH_EXTRA), height: CGFloat(HEIGHT_VIEW) + titleBarHeight), display: true, animate: true)
+        }
+        isOpenView = !isOpenView
+        // Send message to tell window controller update adding button condition
+        NotificationCenter.default.post(name: NSNotification.Name("isOpen"), object: isOpenView)
+    }
 }
+
+// Achieve NSTableView
+extension MainViewController : NSTableViewDataSource, NSTableViewDelegate
+{
+    func initTableView()
+    {
+        initData()
+        
+        // Init tableView
+        let scrollerView = NSScrollView(frame: NSRect(x: WIDTH_VIEW, y: 0, width: Int(WIDTH_EXTRA), height: HEIGHT_VIEW))
+        
+        // Add column
+        let column = NSTableColumn(identifier: NSUserInterfaceItemIdentifier("0"))
+        column.title = "Themes"
+        column.width = scrollerView.frame.width
+        column.maxWidth = column.width
+        column.minWidth = column.width
+        column.isEditable = false
+        
+        tableView.addTableColumn(column)
+        
+        // Set delegates
+        tableView.dataSource = self
+        tableView.delegate = self
+        
+        // Make backgrounds clear
+        tableView.backgroundColor = NSColor.clear
+        scrollerView.drawsBackground = false
+        
+        // Set tableView
+        scrollerView.documentView = tableView
+        scrollerView.hasVerticalScroller = true
+        view.addSubview(scrollerView)
+        
+        
+    }
+    
+    func initData()
+    {
+        // Set test data
+        data = CustomTheme.list(rootDir: defaultPath)
+        tableView.reloadData()
+    }
+    
+    // Achieve data source
+    func numberOfRows(in tableView: NSTableView) -> Int {
+        return data?.count ?? 0
+    }
+    
+    func tableView(_ tableView: NSTableView, objectValueFor tableColumn: NSTableColumn?, row: Int) -> Any? {
+        //print("\(tableView.editedColumn),\(tableView.editedRow)")
+        return data![row]
+    }
+}
+
+
 

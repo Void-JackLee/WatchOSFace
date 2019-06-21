@@ -41,7 +41,7 @@ class AddViewController: NSViewController {
         let column = NSTableColumn(identifier: NSUserInterfaceItemIdentifier("name"))
         column.title = "Name"
         column.isEditable = false
-        column.width = scrollerView.frame.width + 100
+        //column.width = scrollerView.frame.width + 100
         column.minWidth = column.width
         
         elementTableView.addTableColumn(column)
@@ -49,29 +49,6 @@ class AddViewController: NSViewController {
     
     override func viewDidAppear() {
         (view.window!.windowController as! AddWindowController).controllerLoaded()
-    }
-    
-    @IBAction func addClick(_ sender: Any) {
-        print(Date().timeIntervalSince1970)
-    }
-    
-    @IBAction func cancelClick(_ sender: Any) {
-        let alert : NSAlert = NSAlert()
-        alert.addButton(withTitle: "Back")
-        alert.addButton(withTitle: "OK")
-        //alert.buttons[1].target = self
-        //alert.buttons[1].action = #selector(cancelAdding)
-        alert.messageText = "Discard all changes and cancel adding?"
-        alert.beginSheetModal(for: view.window!) { (response : NSApplication.ModalResponse) in
-            if response ==  NSApplication.ModalResponse.alertSecondButtonReturn
-            {
-                do
-                {
-                    try self.theme?.delete()
-                } catch { print(error) }
-                self.view.window?.close()
-            }
-        }
     }
     
     

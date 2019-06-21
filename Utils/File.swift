@@ -22,6 +22,12 @@
 
 import Foundation
 
+enum FileError : Error {
+    case FileNotFound
+    case FileAlreadyExists
+    case TargetDirectoryNotFound
+}
+
 class File
 {
     private let manager = FileManager.default
@@ -252,6 +258,78 @@ class File
         try manager.removeItem(atPath: path)
     }
     
+    /**
+     Move a file to another path, it will change *File* instance's path and url.
+     
+     - Parameters:
+        - path: The new location for the item in *File* itself. It can be a exist directory or a nonexistent target file with a exist parent directory.
+     */
+    func move(to path : String) throws
+    {
+        try move(File(path: path))
+    }
+    
+    /**
+     Move a file to another path, it will change *File* instance's path and url.
+     
+     - Parameters:
+        - url: The new location for the item in *File* itself. It can be a exist directory or a nonexistent target file with a exist parent directory.
+     */
+    func move(to url : URL) throws
+    {
+        try move(File(url: url))
+    }
+    
+    /**
+     Move a file to another path, it will change *File* instance's path and url.
+     
+     - Parameters:
+        - dir: The new location for the item in *File* itself. It should be a exist directory.
+     */
+    func move(toDir dir : File) throws
+    {
+        try move(dir)
+    }
+    
+    private func move(_ file : File) throws
+    {
+        func move(file : File) throws {
+            try manager.moveItem(at: url, to: file.url)
+            self.path = file.path
+            self.url = file.url
+        }
+        
+        if !isExsits()
+        {
+            throw FileError.FileNotFound
+        } else if !file.isDirectory()
+        {
+            if file.isExsits() { throw FileError.FileAlreadyExists }
+            else if !file.getParentFile().isDirectory()
+            {
+                throw FileError.TargetDirectoryNotFound
+            } else {
+                try move(file: file)
+            }
+        } else if file.path.elementsEqual(path) { throw FileError.FileAlreadyExists}
+        else
+        {
+            let target = file.append(childName: getName())
+            if target.isExsits() { throw FileError.FileAlreadyExists }
+            else { try move(file: target) }
+        }
+    }
+    
+    /**
+     Rename *File* instance itself.
+     
+     - Parameters:
+        - name: New name.
+     */
+    func rename(to name : String) throws
+    {
+        try move(getParentFile().append(childName: name))
+    }
     
     /**
      Format any Unix path to a proper way flexibly.

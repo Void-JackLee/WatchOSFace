@@ -26,7 +26,7 @@ import Cocoa
 class EasyMethod
 {
     static func caughtError(_ error : Error) {
-        showAlert("Error! File die! \(error.localizedDescription)", .critical)
+        showAlert("Error! \(error.localizedDescription)", .critical)
     }
     
     static func showAlert(_ str : String, _ style : NSAlert.Style)

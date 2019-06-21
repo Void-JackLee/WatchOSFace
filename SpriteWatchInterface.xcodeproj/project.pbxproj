@@ -31,9 +31,9 @@
 		A4293F3122BA01E1002587F1 /* Wildcard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4293F3022BA01E0002587F1 /* Wildcard.swift */; };
 		A4293F3222BA01E1002587F1 /* Wildcard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4293F3022BA01E0002587F1 /* Wildcard.swift */; };
 		A4293F3322BA01E1002587F1 /* Wildcard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4293F3022BA01E0002587F1 /* Wildcard.swift */; };
-		A4293F3922BA8D97002587F1 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4293F3822BA8D97002587F1 /* File.swift */; };
-		A4293F3A22BA8DF3002587F1 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4293F3822BA8D97002587F1 /* File.swift */; };
-		A4293F3B22BA8DF5002587F1 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4293F3822BA8D97002587F1 /* File.swift */; };
+		A42E449622BB8ACF00C243D5 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42E449522BB8ACF00C243D5 /* File.swift */; };
+		A42E449722BB8ACF00C243D5 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42E449522BB8ACF00C243D5 /* File.swift */; };
+		A42E449822BB8ACF00C243D5 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42E449522BB8ACF00C243D5 /* File.swift */; };
 		A46218DB221B13F800EA3E6C /* ProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A46218D8221B13F800EA3E6C /* ProgressHUD.bundle */; };
 		A46218DC221B13F800EA3E6C /* ProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = A46218DA221B13F800EA3E6C /* ProgressHUD.m */; };
 		A46218DD221BCAAE00EA3E6C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A401F815221454100047C89B /* Assets.xcassets */; };
@@ -167,7 +167,7 @@
 		A4293EAA22B64610002587F1 /* EasyMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EasyMethod.swift; sourceTree = "<group>"; };
 		A4293EEC22B69713002587F1 /* CustomTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTheme.swift; sourceTree = "<group>"; };
 		A4293F3022BA01E0002587F1 /* Wildcard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Wildcard.swift; sourceTree = "<group>"; };
-		A4293F3822BA8D97002587F1 /* File.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
+		A42E449522BB8ACF00C243D5 /* File.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		A46218D7221B13F600EA3E6C /* SpriteWatchInterface-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SpriteWatchInterface-Bridging-Header.h"; sourceTree = "<group>"; };
 		A46218D8221B13F800EA3E6C /* ProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ProgressHUD.bundle; sourceTree = "<group>"; };
 		A46218D9221B13F800EA3E6C /* ProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgressHUD.h; sourceTree = "<group>"; };
@@ -361,7 +361,7 @@
 			isa = PBXGroup;
 			children = (
 				A4293F3022BA01E0002587F1 /* Wildcard.swift */,
-				A4293F3822BA8D97002587F1 /* File.swift */,
+				A42E449522BB8ACF00C243D5 /* File.swift */,
 				A4293EAA22B64610002587F1 /* EasyMethod.swift */,
 			);
 			path = Utils;
@@ -709,7 +709,7 @@
 				A4293EED22B69713002587F1 /* CustomTheme.swift in Sources */,
 				A401F7CD221453830047C89B /* GameViewController.swift in Sources */,
 				A46218DC221B13F800EA3E6C /* ProgressHUD.m in Sources */,
-				A4293F3922BA8D97002587F1 /* File.swift in Sources */,
+				A42E449622BB8ACF00C243D5 /* File.swift in Sources */,
 				A401F7C5221453830047C89B /* AppDelegate.swift in Sources */,
 				A4C45CE5221718BE00B13CB8 /* FaceScene.swift in Sources */,
 				A4293F3122BA01E1002587F1 /* Wildcard.swift in Sources */,
@@ -746,7 +746,7 @@
 				A401F8142214540F0047C89B /* NotificationController.swift in Sources */,
 				A4293EEF22B69D3F002587F1 /* CustomTheme.swift in Sources */,
 				A401F8122214540F0047C89B /* ExtensionDelegate.swift in Sources */,
-				A4293F3A22BA8DF3002587F1 /* File.swift in Sources */,
+				A42E449722BB8ACF00C243D5 /* File.swift in Sources */,
 				A4C45CE22216E70C00B13CB8 /* StyleOrganized.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -760,7 +760,7 @@
 				A4293F0B22B75C87002587F1 /* EasyMethod.swift in Sources */,
 				A4293F3322BA01E1002587F1 /* Wildcard.swift in Sources */,
 				A462191222214E3A00EA3E6C /* BackgroundStyle.swift in Sources */,
-				A4293F3B22BA8DF5002587F1 /* File.swift in Sources */,
+				A42E449822BB8ACF00C243D5 /* File.swift in Sources */,
 				A462191022214E3100EA3E6C /* FaceScene.swift in Sources */,
 				A4B0972A22B53CD200FA492E /* ElementAddingViewController.swift in Sources */,
 				A46218E82221436400EA3E6C /* MainViewController.swift in Sources */,

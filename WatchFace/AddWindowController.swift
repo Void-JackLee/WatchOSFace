@@ -24,18 +24,17 @@ import Cocoa
 
 class AddWindowController: NSWindowController {
     
-    @IBOutlet weak var titleLabel: NSTextFieldCell!
-    
     @IBOutlet weak var addButton: NSButton!
     
     var hasError = false
     
     var theme : CustomTheme?
     
+    let item_add = NSTouchBarItem.Identifier(rawValue: "item_element_add"), item_remove = NSTouchBarItem.Identifier(rawValue: "item_element_remove"), item_confirm = NSTouchBarItem.Identifier(rawValue: "item_create_confirm"), item_cancel = NSTouchBarItem.Identifier(rawValue: "item_create_cancel")
+    
     override func prepare(for segue: NSStoryboardSegue, sender: Any?) {
         theme = sender as? CustomTheme
         window?.title = "Add New Theme - " + theme!.name
-        titleLabel.title = window!.title
     }
     
     override func windowDidLoad() {
@@ -50,8 +49,6 @@ class AddWindowController: NSWindowController {
         
         // Set stuff
         window?.title = "Add New Theme"
-        titleLabel.title = window!.title
-        window?.titleVisibility = .hidden
         window?.standardWindowButton(.miniaturizeButton)?.isHidden = true
         
         
@@ -66,13 +63,86 @@ class AddWindowController: NSWindowController {
         popover.show(relativeTo: addButton.frame, of: addButton, preferredEdge: NSRectEdge.maxY)
     }
     
+    
+    @IBAction func confirmClick(_ sender: Any) {
+        do
+        {
+            try theme?.commit()
+            // Send message to tell main window controller update list
+            NotificationCenter.default.post(name: NSNotification.Name("list_fresh"), object: nil)
+            window!.close()
+        } catch {
+            EasyMethod.caughtError(error)
+        }
+    }
+    
+    
+    @IBAction func cancelClick(_ sender: Any) {
+        let alert : NSAlert = NSAlert()
+        alert.addButton(withTitle: "Back")
+        alert.addButton(withTitle: "OK")
+        //alert.buttons[1].target = self
+        //alert.buttons[1].action = #selector(cancelAdding)
+        alert.messageText = "Discard all changes and cancel adding?"
+        alert.beginSheetModal(for: window!) { (response : NSApplication.ModalResponse) in
+            if response ==  NSApplication.ModalResponse.alertSecondButtonReturn
+            {
+                do
+                {
+                    if self.theme != nil
+                    {
+                        if self.theme!.isFirstTmp { try self.theme!.delete() }
+                        else
+                        {
+                            //删掉.tmp文件
+                        }
+                    }
+                } catch { print(error) }
+                self.window?.close()
+            }
+        }
+    }
+    
     func controllerLoaded()
     {
         (contentViewController as! AddViewController).theme = theme!
     }
-    
-    func readDir(_ path : String)
-    {
+}
+
+extension AddWindowController : NSTouchBarDelegate
+{
+    override func makeTouchBar() -> NSTouchBar? {
+        let touchbar = NSTouchBar()
+        touchbar.customizationIdentifier = NSTouchBar.CustomizationIdentifier("editor")
         
+        touchbar.defaultItemIdentifiers = [item_add, item_remove, .flexibleSpace ,item_confirm, item_cancel]
+        touchbar.customizationAllowedItemIdentifiers = [item_add, item_remove, .flexibleSpace, item_confirm, item_cancel]
+        
+        touchbar.delegate = self
+        return touchbar
+    }
+    
+    func touchBar(_ touchBar: NSTouchBar, makeItemForIdentifier identifier: NSTouchBarItem.Identifier) -> NSTouchBarItem? {
+        let item = NSCustomTouchBarItem(identifier: identifier)
+        var itemDescription = ""
+        switch identifier {
+        case item_add:
+            itemDescription = "Add Element Button"
+            item.view = NSButton(image: NSImage(named: NSImage.Name("NSAddTemplate"))!, target: self, action: #selector(addElementAction))
+        case item_remove:
+            itemDescription = "Remove Element Button"
+            item.view = NSButton(image: NSImage(named: NSImage.Name("NSTrashEmpty"))!, target: self, action: nil)
+        case item_confirm:
+            itemDescription = "Confirm Theme Button"
+            item.view = NSButton(image: NSImage(named: NSImage.Name("progresshud-success"))!, target: self, action: #selector(confirmClick))
+        case item_cancel:
+            itemDescription = "Cancel Edit Theme Button"
+            item.view = NSButton(image: NSImage(named: NSImage.Name("progresshud-error"))!, target: self, action: #selector(cancelClick))
+        default:
+            print("???")
+        }
+        
+        item.customizationLabel = itemDescription
+        return item
     }
 }
