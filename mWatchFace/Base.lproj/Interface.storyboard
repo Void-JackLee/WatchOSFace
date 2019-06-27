@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14460.31" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
-    <device id="watch38" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14810.11" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch38"/>
     <dependencies>
         <deployment identifier="watchOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14460.16"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14766.13"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14619.8"/>
     </dependencies>
     <scenes>
         <!--Interface Controller-->
@@ -21,7 +19,7 @@
                                     <group key="rootItem" width="1" height="0.0" alignment="left" id="mV2-La-DQ8">
                                         <items>
                                             <imageView width="0.5" height="2" alignment="left" id="Gbe-ga-ksz"/>
-                                            <label width="0.5" alignment="center" verticalAlignment="center" text="Label" textAlignment="center" id="qd8-AC-oXd"/>
+                                            <label width="0.5" alignment="center" verticalAlignment="center" text="Title" textAlignment="center" id="qd8-AC-oXd"/>
                                         </items>
                                     </group>
                                     <connections>
@@ -34,12 +32,12 @@
                     </items>
                     <menu key="menu" id="fI3-9C-ABU">
                         <items>
-                            <menuItem title="设置表盘" image="ChooseInterfaceIcon" id="b31-w0-4uJ">
+                            <menuItem title="Set Face" image="ChooseInterfaceIcon" id="b31-w0-4uJ">
                                 <connections>
                                     <action selector="showSwitcher" destination="AgC-eL-Hgc" id="ler-Ss-UXE"/>
                                 </connections>
                             </menuItem>
-                            <menuItem title="取消" icon="decline" id="q0t-AO-Auz"/>
+                            <menuItem title="Cancel" icon="decline" id="q0t-AO-Auz"/>
                         </items>
                     </menu>
                     <connections>
@@ -55,7 +53,7 @@
             <objects>
                 <notificationController id="YCC-NB-fut">
                     <items>
-                        <label alignment="left" text="Alert Label" numberOfLines="0" id="IdU-wH-bcW"/>
+                        <label alignment="left" text="Watch Face" numberOfLines="0" id="IdU-wH-bcW"/>
                     </items>
                     <notificationCategory key="notificationCategory" identifier="myCategory" id="JfB-70-Muf"/>
                     <connections>
@@ -82,4 +80,7 @@
             <point key="canvasLocation" x="468" y="345"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="ChooseInterfaceIcon" width="100" height="100"/>
+    </resources>
 </document>

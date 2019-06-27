@@ -24,7 +24,11 @@ import Cocoa
 
 class AddNameController: NSViewController {
 
+    @IBOutlet weak var scrollerView: NSScrollView!
+    @IBOutlet var editText: AddingTextView!
     @IBOutlet weak var titleField: NSTextField!
+    
+    var popover : NSPopover?
     
     let defaultPath = File(path: "~/SpriteClock")
     
@@ -34,20 +38,30 @@ class AddNameController: NSViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        editText.backgroundColor = .clear
+        scrollerView.drawsBackground = false
+        scrollerView.backgroundColor = .clear
+        editText.font = NSFont.systemFont(ofSize: 13)
+        editText.returnAction = {
+            self.OKAction(self)
+        }
+        editText.delegate = self
+        editText.cancelAction = { self.popover?.close() }
+        
     }
     
     @IBAction func OKAction(_ sender: Any) {
         
-        let name = titleField.stringValue
+        let name = editText.string
         var dirName = name
         if name == ""
         {
-            EasyMethod.showAlert("Name can't be empty!", .critical)
+            EasyMethod.showAlert(string_empty_name, .critical)
         } else
         {
             if name.contains("/") || name.contains(".") || name.contains("*") || name.contains("?") || name.contains("#")
             {
-                EasyMethod.showAlert("Name can't contain ?*#./", .critical)
+                EasyMethod.showAlert(string_invalid_name, .critical)
             } else
             {
                 if dirName.contains(" ")
@@ -63,7 +77,7 @@ class AddNameController: NSViewController {
                     let theme = CustomTheme(name: name, time: String(Date().timeIntervalSince1970), rootDir: defaultPath, themeDirName: dirName)
                     try theme.write()
                     // 3. Jump to editor, and send object
-                    performSegue(withIdentifier: NSStoryboardSegue.Identifier("jump_element_adding"), sender: theme)
+                    performSegue(withIdentifier: NSStoryboardSegue.Identifier("jump_adding"), sender: theme)
                 } catch
                 {
                     EasyMethod.caughtError(error)
@@ -71,5 +85,88 @@ class AddNameController: NSViewController {
             }
         }
         self.dismiss(nil)
+    }
+}
+
+extension AddNameController : NSTextViewDelegate
+{
+    func textDidChange(_ notification: Notification) {
+        if editText.string == ""
+        {
+            titleField.placeholderString = NSLocalizedString("string_name", comment: "Name")
+        } else
+        {
+            titleField.placeholderString = ""
+        }
+    }
+}
+
+class AddingTextView : NSTextView
+{
+    var returnAction : (() -> Void)?
+    
+    override func insertNewline(_ sender: Any?) {
+        returnAction?()
+    }
+    
+    override func insertNewlineIgnoringFieldEditor(_ sender: Any?) {
+        returnAction?()
+    }
+    
+    override func paste(_ sender: Any?) {
+        
+        let pasteboard = NSPasteboard.general
+        
+        guard let pasteboardItem = pasteboard.pasteboardItems?.first, let text = pasteboardItem.string(forType: NSPasteboard.PasteboardType(rawValue: "public.utf8-plain-text"))
+            else { return }
+        
+        let cleanText = text.replacingOccurrences(of: "\n", with: " ")
+        self.insertText(cleanText, replacementRange: NSRange())
+    }
+    
+    // popover cancel
+    var cancelAction : (() -> Void)?
+}
+
+extension AddingTextView
+{
+    override func makeTouchBar() -> NSTouchBar? {
+        let touchbar = NSTouchBar()
+        touchbar.customizationIdentifier = NSTouchBar.CustomizationIdentifier("addName")
+        
+        touchbar.defaultItemIdentifiers = [.init("item_OK"), .init("item_Cancel"),.flexibleSpace,.characterPicker]
+        touchbar.customizationAllowedItemIdentifiers = [.init("item_OK"), .init("item_Cancel"),.flexibleSpace,.characterPicker]
+        
+        touchbar.delegate = self
+        return touchbar
+    }
+    
+    override func touchBar(_ touchBar: NSTouchBar, makeItemForIdentifier identifier: NSTouchBarItem.Identifier) -> NSTouchBarItem? {
+        let item = NSCustomTouchBarItem(identifier: identifier)
+        var itemDescription = ""
+        switch identifier {
+        case .init("item_OK"):
+            itemDescription = string_touchbar_description_ok
+            let button = NSButton(title: string_button_ok, target: self, action: #selector(add))
+            button.bezelColor = NSColor.controlAccentColor
+            item.view = button
+        case .init("item_Cancel"):
+            itemDescription = string_touchbar_description_cancel
+            item.view = NSButton(title: string_button_cancel, target: self, action: #selector(cancel))
+        default:
+            print("???")
+        }
+        item.customizationLabel = itemDescription
+        return item
+    }
+    
+    @objc func add()
+    {
+        returnAction?()
+    }
+    
+    @objc func cancel()
+    {
+        cancelAction?()
     }
 }

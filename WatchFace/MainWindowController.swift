@@ -44,7 +44,8 @@ class MainWindowController : NSWindowController
         window?.standardWindowButton(.miniaturizeButton)?.isHidden = true
         window?.standardWindowButton(.zoomButton)?.isHidden = true
         //window?.titlebarAppearsTransparent = true
-        titleLabel.title = "WatchFace on Mac"
+        window?.title = string_window_main_title
+        titleLabel.title = string_window_main_title
         
         // Receive window transform condition
         NotificationCenter.default.addObserver(self, selector: #selector(change), name: Notification.Name("isOpen"), object: nil) //obj是发送对象
@@ -99,9 +100,10 @@ class MainWindowController : NSWindowController
                     // Show tip
                     let alert : NSAlert = NSAlert()
                     alert.alertStyle = .informational
-                    alert.messageText = "Found unsaved theme \"\(name)\", do you want to continue your work?"
-                    alert.addButton(withTitle: "Continue")
-                    alert.addButton(withTitle: "Create new theme")
+                    
+                    alert.messageText = "\(string_message_tmp_1)\(name)\(string_message_tmp_2)"
+                    alert.addButton(withTitle: string_button_continue)
+                    alert.addButton(withTitle: string_button_create_new_theme)
                     let type = alert.runModal()
                     if type == .alertSecondButtonReturn
                     {
@@ -111,7 +113,7 @@ class MainWindowController : NSWindowController
                     if type == .alertFirstButtonReturn
                     {
                         // Continue edit temporary theme, jump to editor
-                        addingController.performSegue(withIdentifier: NSStoryboardSegue.Identifier("jump_element_adding"), sender: theme)
+                        addingController.performSegue(withIdentifier: NSStoryboardSegue.Identifier("jump_adding"), sender: theme)
                     }
                 } catch
                 {
@@ -148,9 +150,10 @@ class MainWindowController : NSWindowController
         }
     }
     
-    func popupAddingNameView(controller : NSViewController)
+    func popupAddingNameView(controller : AddNameController)
     {
         let popover = NSPopover()
+        controller.popover = popover
         popover.contentViewController = controller
         popover.behavior = .transient
         popover.show(relativeTo: addButton.bounds, of: addButton, preferredEdge: NSRectEdge.maxY)
@@ -187,13 +190,13 @@ extension MainWindowController : NSTouchBarDelegate
         var itemDescription = ""
         switch identifier {
         case item_add:
-            itemDescription = "Fresh List Button"
+            itemDescription = string_touchbar_description_fresh_list
             item.view = NSButton(image: NSImage(named: NSImage.Name("NSAddTemplate"))!, target: self, action: #selector(touchAdd))
         case item_fresh:
-            itemDescription = "Add button"
+            itemDescription = string_touchbar_description_add
             item.view = NSButton(image: NSImage(named: NSImage.Name("NSRefreshTemplate"))!, target: self, action: #selector(touchFresh))
         case item_expand:
-            itemDescription = "Add button"
+            itemDescription = string_touchbar_description_expand
             item.view = expandButton
         default:
             print("???")

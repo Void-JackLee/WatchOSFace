@@ -39,7 +39,7 @@ class AddViewController: NSViewController {
         scrollerView.drawsBackground = false
         elementTableView.backgroundColor = NSColor.clear
         let column = NSTableColumn(identifier: NSUserInterfaceItemIdentifier("name"))
-        column.title = "Name"
+        column.title = NSLocalizedString("string_name", comment: "Name")
         column.isEditable = false
         //column.width = scrollerView.frame.width + 100
         column.minWidth = column.width
@@ -49,6 +49,11 @@ class AddViewController: NSViewController {
     
     override func viewDidAppear() {
         (view.window!.windowController as! AddWindowController).controllerLoaded()
+    }
+    
+    func openAddingWindow()
+    {
+        performSegue(withIdentifier: NSStoryboardSegue.Identifier("jump_element_adding"), sender: nil)
     }
     
     

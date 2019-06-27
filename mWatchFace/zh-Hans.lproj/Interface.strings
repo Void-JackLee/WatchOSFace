@@ -1,0 +1,12 @@
+
+/* Class = "WKInterfaceLabel"; text = "Alert Label"; ObjectID = "IdU-wH-bcW"; */
+"IdU-wH-bcW.text" = "手表表盘";
+
+/* Class = "WKInterfaceMenuItem"; title = "设置表盘"; ObjectID = "b31-w0-4uJ"; */
+"b31-w0-4uJ.title" = "设置表盘";
+
+/* Class = "WKInterfaceMenuItem"; title = "取消"; ObjectID = "q0t-AO-Auz"; */
+"q0t-AO-Auz.title" = "取消";
+
+/* Class = "WKInterfaceLabel"; text = "Label"; ObjectID = "qd8-AC-oXd"; */
+"qd8-AC-oXd.text" = "标题";

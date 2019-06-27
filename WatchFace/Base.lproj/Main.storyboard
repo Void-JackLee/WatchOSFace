@@ -689,9 +689,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="333" height="61"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Eqj-18-0fJ">
+                            <textField horizontalHuggingPriority="249" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Eqj-18-0fJ">
                                 <rect key="frame" x="20" y="20" width="231" height="21"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" placeholderString="Name" drawsBackground="YES" id="iQa-7n-0Me">
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" borderStyle="bezel" placeholderString="Name" drawsBackground="YES" id="iQa-7n-0Me">
                                     <font key="font" usesAppearanceFont="YES"/>
                                     <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -710,26 +710,57 @@ DQ
                                     <action selector="OKAction:" target="uMr-Il-f6j" id="uo1-rC-nyb"/>
                                 </connections>
                             </button>
+                            <scrollView borderType="none" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NTf-ps-kmB">
+                                <rect key="frame" x="20" y="22" width="231" height="17"/>
+                                <clipView key="contentView" drawsBackground="NO" copiesOnScroll="NO" id="HnO-Bc-XQx">
+                                    <rect key="frame" x="0.0" y="0.0" width="231" height="17"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <textView importsGraphics="NO" richText="NO" verticallyResizable="YES" spellingCorrection="YES" smartInsertDelete="YES" id="Qmb-XI-5m6" customClass="AddingTextView" customModule="WatchFace" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="231" height="17"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            <size key="minSize" width="231" height="17"/>
+                                            <size key="maxSize" width="243" height="10000000"/>
+                                            <color key="insertionPointColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                        </textView>
+                                    </subviews>
+                                </clipView>
+                                <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="Pvg-ed-L2B">
+                                    <rect key="frame" x="-100" y="-100" width="240" height="16"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </scroller>
+                                <scroller key="verticalScroller" wantsLayer="YES" verticalHuggingPriority="750" horizontal="NO" id="Dsm-JB-bqR">
+                                    <rect key="frame" x="215" y="0.0" width="16" height="17"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </scroller>
+                            </scrollView>
                         </subviews>
                         <constraints>
+                            <constraint firstItem="NTf-ps-kmB" firstAttribute="leading" secondItem="Yir-wS-8qL" secondAttribute="leading" constant="20" id="5LV-it-VF6"/>
                             <constraint firstItem="OHJ-Z8-xfF" firstAttribute="top" secondItem="Yir-wS-8qL" secondAttribute="top" constant="20" id="G0T-zf-Hwf"/>
                             <constraint firstItem="Eqj-18-0fJ" firstAttribute="leading" secondItem="Yir-wS-8qL" secondAttribute="leading" constant="20" id="Mw6-wU-RgY"/>
+                            <constraint firstAttribute="bottom" secondItem="NTf-ps-kmB" secondAttribute="bottom" constant="22" id="NDh-JX-0qa"/>
+                            <constraint firstItem="OHJ-Z8-xfF" firstAttribute="leading" secondItem="NTf-ps-kmB" secondAttribute="trailing" constant="15" id="OKB-xC-rkf"/>
                             <constraint firstItem="OHJ-Z8-xfF" firstAttribute="leading" secondItem="Eqj-18-0fJ" secondAttribute="trailing" constant="15" id="Yz8-mu-rhH"/>
                             <constraint firstAttribute="bottom" secondItem="OHJ-Z8-xfF" secondAttribute="bottom" constant="20" id="a6F-OA-OZx"/>
                             <constraint firstAttribute="trailing" secondItem="OHJ-Z8-xfF" secondAttribute="trailing" constant="20" id="avZ-Zz-KDL"/>
+                            <constraint firstItem="NTf-ps-kmB" firstAttribute="top" secondItem="Yir-wS-8qL" secondAttribute="top" constant="22" id="hVP-6L-sgl"/>
                             <constraint firstAttribute="bottom" secondItem="Eqj-18-0fJ" secondAttribute="bottom" constant="20" id="pZ3-K0-gDr"/>
-                            <constraint firstItem="OHJ-Z8-xfF" firstAttribute="leading" secondItem="Eqj-18-0fJ" secondAttribute="trailing" constant="15" id="qRs-GM-Z6w"/>
                             <constraint firstItem="Eqj-18-0fJ" firstAttribute="top" secondItem="Yir-wS-8qL" secondAttribute="top" constant="20" id="z71-0X-uh6"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="editText" destination="Qmb-XI-5m6" id="Ufo-65-OPj"/>
+                        <outlet property="scrollerView" destination="NTf-ps-kmB" id="xxk-Bv-s4c"/>
                         <outlet property="titleField" destination="Eqj-18-0fJ" id="SUJ-qA-PgE"/>
-                        <segue destination="d2O-jS-0Gd" kind="show" identifier="jump_element_adding" id="BXy-44-tsi"/>
+                        <segue destination="d2O-jS-0Gd" kind="show" identifier="jump_adding" id="BXy-44-tsi"/>
                     </connections>
                 </viewController>
                 <customObject id="bSh-oF-6Oc" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="688" y="-133"/>
+            <point key="canvasLocation" x="687.5" y="-133.5"/>
         </scene>
         <!--Window Controller-->
         <scene sceneID="R2V-B0-nI4">
@@ -893,6 +924,27 @@ DQ
             </objects>
             <point key="canvasLocation" x="687" y="250"/>
         </scene>
+        <!--Window Controller-->
+        <scene sceneID="K5Y-pa-I4m">
+            <objects>
+                <customObject id="Xzb-P2-GXq" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <windowController storyboardIdentifier="window_adding" id="bVV-uR-IYZ" customClass="ElementAddingWindowController" customModule="WatchFace" customModuleProvider="target" sceneMemberID="viewController">
+                    <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="t5f-dz-o25" customClass="NSPanel">
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+                        <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+                        <rect key="contentRect" x="196" y="240" width="480" height="270"/>
+                        <rect key="screenRect" x="0.0" y="0.0" width="1440" height="877"/>
+                        <connections>
+                            <outlet property="delegate" destination="bVV-uR-IYZ" id="D1N-kS-Iks"/>
+                        </connections>
+                    </window>
+                    <connections>
+                        <segue destination="H7V-ry-zwn" kind="relationship" relationship="window.shadowedContentViewController" id="Opp-Qr-EJb"/>
+                    </connections>
+                </windowController>
+            </objects>
+            <point key="canvasLocation" x="1324" y="250"/>
+        </scene>
         <!--Element Adding View Controller-->
         <scene sceneID="JXq-hT-EMW">
             <objects>
@@ -904,7 +956,7 @@ DQ
                 </viewController>
                 <customObject id="Qk7-IX-HCJ" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1265" y="250"/>
+            <point key="canvasLocation" x="1324" y="806"/>
         </scene>
         <!--Add View Controller-->
         <scene sceneID="UsI-zk-f02">
@@ -996,6 +1048,7 @@ DQ
                     <connections>
                         <outlet property="previewHolder" destination="nER-MK-iAW" id="vac-Vc-DUR"/>
                         <outlet property="scrollerView" destination="7wC-7b-Mw0" id="MDA-e9-Ks7"/>
+                        <segue destination="bVV-uR-IYZ" kind="show" identifier="jump_element_adding" id="Dhx-90-Cf7"/>
                     </connections>
                 </viewController>
                 <customObject id="3bH-Ds-1un" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>

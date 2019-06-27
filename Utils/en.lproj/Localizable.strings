@@ -1,0 +1,31 @@
+/* 
+  Localizable.strings
+  SpriteWatchInterface
+
+  Created by 李弘辰 on 2019/6/24.
+  Copyright © 2019 李弘辰. All rights reserved.
+*/
+
+"window_main_title" = "WatchFace on Mac";
+"window_theme_add_title" = "Add New Theme";
+"string_themes" = "Themes";
+"string_message_tmp_1" = "Found unsaved theme \"";
+"string_message_tmp_2" = "\", do you want to continue your work?";
+"button_continue" = "Continue";
+"button_create_new_theme" = "Create new theme";
+"touchbar_description_fresh_list" = "Fresh List Button";
+"touchbar_description_add" = "Add button";
+"touchbar_description_expand" = "Expand Button";
+"string_empty_name" = "Name can't be empty!";
+"string_invalid_name" = "Name can't contain ?*#./";
+"string_name" = "Name";
+"button_ok" = "OK";
+"button_cancel" = "Cancel";
+"touchbar_description_ok" = "OK Button";
+"touchbar_description_cancel" = "Cancel Button";
+"button_back" = "Back";
+"string_message_discard_change" = "Discard all changes and cancel editing?";
+"touchbar_description_element_add" = "Add Element Button";
+"touchbar_description_element_remove" = "Remove Element Button";
+"touchbar_description_theme_confirm" = "Confirm Theme Button";
+"touchbar_description_theme_edit_cancel" = "Cancel Edit Theme Button";

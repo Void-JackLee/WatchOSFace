@@ -30,11 +30,13 @@ class AddWindowController: NSWindowController {
     
     var theme : CustomTheme?
     
-    let item_add = NSTouchBarItem.Identifier(rawValue: "item_element_add"), item_remove = NSTouchBarItem.Identifier(rawValue: "item_element_remove"), item_confirm = NSTouchBarItem.Identifier(rawValue: "item_create_confirm"), item_cancel = NSTouchBarItem.Identifier(rawValue: "item_create_cancel")
+    let item_add = NSTouchBarItem.Identifier("item_element_add"), item_remove = NSTouchBarItem.Identifier("item_element_remove"), item_confirm = NSTouchBarItem.Identifier("item_create_confirm"), item_cancel = NSTouchBarItem.Identifier("item_create_cancel")
+    
+    
     
     override func prepare(for segue: NSStoryboardSegue, sender: Any?) {
         theme = sender as? CustomTheme
-        window?.title = "Add New Theme - " + theme!.name
+        window?.title = string_window_theme_add_title + " - " + theme!.name
     }
     
     override func windowDidLoad() {
@@ -48,20 +50,16 @@ class AddWindowController: NSWindowController {
         window!.setFrame(NSRect(x: (WIDTH_SCREEN - WIDTH) / 2, y: (HEIGHT_SCREEN - HEIGHT) / 2, width: WIDTH, height: HEIGHT), display: true, animate: false)
         
         // Set stuff
-        window?.title = "Add New Theme"
+        window?.title = string_window_theme_add_title
         window?.standardWindowButton(.miniaturizeButton)?.isHidden = true
-        
         
         
     }
     
     @IBAction func addElementAction(_ sender: Any) {
-        let addingController = NSStoryboard(name: NSStoryboard.Name("Main"), bundle: nil).instantiateController(withIdentifier: NSStoryboard.SceneIdentifier("controller_adding")) as! ElementAddingViewController
-        let popover = NSPopover()
-        popover.contentViewController = addingController
-        popover.behavior = .transient
-        popover.show(relativeTo: addButton.frame, of: addButton, preferredEdge: NSRectEdge.maxY)
+        (contentViewController as? AddViewController)?.openAddingWindow()
     }
+    
     
     
     @IBAction func confirmClick(_ sender: Any) {
@@ -79,11 +77,11 @@ class AddWindowController: NSWindowController {
     
     @IBAction func cancelClick(_ sender: Any) {
         let alert : NSAlert = NSAlert()
-        alert.addButton(withTitle: "Back")
-        alert.addButton(withTitle: "OK")
+        alert.addButton(withTitle: string_button_back)
+        alert.addButton(withTitle: string_button_ok)
         //alert.buttons[1].target = self
         //alert.buttons[1].action = #selector(cancelAdding)
-        alert.messageText = "Discard all changes and cancel adding?"
+        alert.messageText = string_message_discard_change
         alert.beginSheetModal(for: window!) { (response : NSApplication.ModalResponse) in
             if response ==  NSApplication.ModalResponse.alertSecondButtonReturn
             {
@@ -115,8 +113,8 @@ extension AddWindowController : NSTouchBarDelegate
         let touchbar = NSTouchBar()
         touchbar.customizationIdentifier = NSTouchBar.CustomizationIdentifier("editor")
         
-        touchbar.defaultItemIdentifiers = [item_add, item_remove, .flexibleSpace ,item_confirm, item_cancel]
-        touchbar.customizationAllowedItemIdentifiers = [item_add, item_remove, .flexibleSpace, item_confirm, item_cancel]
+        touchbar.defaultItemIdentifiers = [item_add, item_remove, .flexibleSpace ,item_cancel, item_confirm]
+        touchbar.customizationAllowedItemIdentifiers = [item_add, item_remove, .flexibleSpace, item_cancel, item_confirm]
         
         touchbar.delegate = self
         return touchbar
@@ -127,16 +125,16 @@ extension AddWindowController : NSTouchBarDelegate
         var itemDescription = ""
         switch identifier {
         case item_add:
-            itemDescription = "Add Element Button"
+            itemDescription = string_touchbar_description_element_add
             item.view = NSButton(image: NSImage(named: NSImage.Name("NSAddTemplate"))!, target: self, action: #selector(addElementAction))
         case item_remove:
-            itemDescription = "Remove Element Button"
+            itemDescription = string_touchbar_description_element_remove
             item.view = NSButton(image: NSImage(named: NSImage.Name("NSTrashEmpty"))!, target: self, action: nil)
         case item_confirm:
-            itemDescription = "Confirm Theme Button"
+            itemDescription = string_touchbar_description_theme_confirm
             item.view = NSButton(image: NSImage(named: NSImage.Name("progresshud-success"))!, target: self, action: #selector(confirmClick))
         case item_cancel:
-            itemDescription = "Cancel Edit Theme Button"
+            itemDescription = string_touchbar_description_theme_edit_cancel
             item.view = NSButton(image: NSImage(named: NSImage.Name("progresshud-error"))!, target: self, action: #selector(cancelClick))
         default:
             print("???")
@@ -144,5 +142,16 @@ extension AddWindowController : NSTouchBarDelegate
         
         item.customizationLabel = itemDescription
         return item
+    }
+}
+
+extension AddWindowController : NSPopoverDelegate {
+    
+    func popoverShouldDetach(_ popover: NSPopover) -> Bool {
+        return true
+    }
+    
+    func detachableWindow(for popover: NSPopover) -> NSWindow? {
+        return nil
     }
 }

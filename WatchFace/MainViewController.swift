@@ -154,7 +154,7 @@ extension MainViewController : NSTableViewDataSource, NSTableViewDelegate
         
         // Add column
         let column = NSTableColumn(identifier: NSUserInterfaceItemIdentifier("0"))
-        column.title = "Themes"
+        column.title = string_themes
         column.width = scrollerView.frame.width
         column.maxWidth = column.width
         column.minWidth = column.width
