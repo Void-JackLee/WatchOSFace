@@ -74,10 +74,6 @@ class MainViewController: NSViewController, NSWindowDelegate {
         
         initTableView()
         
-        /*let btn = NSButton(frame: NSRect(x: 0, y: 0, width: 100, height: 50))
-        btn.action = #selector(click)
-        view.addSubview(btn)*/
-        
     }
     
     override func viewDidAppear() {
