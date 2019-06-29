@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ SKTileGroupRuleInspector.inspector
+ SpriteKitEditor
+ 
+ Copyright 2016 Apple Inc. All rights reserved.
+ -->
+
+<slice>
+    <section>
+        <sliver title="Name">
+            <property type="string" placeholder="name" keyPath="inspectedObjectsController.selection.name_commit" editable="true"/>
+        </sliver>
+    </section>
+    <section visibleKeyPath="inspectedObjectsController.selection.inspectorShowAdjacency">
+        <sliver title="Tile Adjacency">
+            <property type="boolean" title="Above is filled" keyPath="inspectedObjectsController.selection.inspectorAdjacencyUp_commit" />
+            <property type="boolean" title="Above Right is filled" keyPath="inspectedObjectsController.selection.inspectorAdjacencyUpperRight_commit" />
+            <property type="boolean" title="Right is filled" keyPath="inspectedObjectsController.selection.inspectorAdjacencyRight_commit" />
+            <property type="boolean" title="Below Right is filled" keyPath="inspectedObjectsController.selection.inspectorAdjacencyLowerRight_commit" />
+            <property type="boolean" title="Below is filled" keyPath="inspectedObjectsController.selection.inspectorAdjacencyDown_commit" />
+            <property type="boolean" title="Below Left is filled" keyPath="inspectedObjectsController.selection.inspectorAdjacencyLowerLeft_commit" />
+            <property type="boolean" title="Left is filled" keyPath="inspectedObjectsController.selection.inspectorAdjacencyLeft_commit" />
+            <property type="boolean" title="Above Left is filled" keyPath="inspectedObjectsController.selection.inspectorAdjacencyUpperLeft_commit" />
+        </sliver>
+    </section>
+    <section visibleKeyPath="inspectedObjectsController.selection.inspectorShowHexPointyAdjacency">
+        <sliver title="Tile Adjacency">
+            <property type="boolean" title="Above Left is filled" keyPath="inspectedObjectsController.selection.inspectorHexPointyAdjacencyUpLeft_commit" />
+            <property type="boolean" title="Above Right is filled" keyPath="inspectedObjectsController.selection.inspectorHexPointyAdjacencyUpRight_commit" />
+            <property type="boolean" title="Right is filled" keyPath="inspectedObjectsController.selection.inspectorHexPointyAdjacencyRight_commit" />
+            <property type="boolean" title="Below Right is filled" keyPath="inspectedObjectsController.selection.inspectorHexPointyAdjacencyDownRight_commit" />
+            <property type="boolean" title="Below Left is filled" keyPath="inspectedObjectsController.selection.inspectorHexPointyAdjacencyDownLeft_commit" />
+            <property type="boolean" title="Left is filled" keyPath="inspectedObjectsController.selection.inspectorHexPointyAdjacencyLeft_commit" />
+        </sliver>
+    </section>
+    <section visibleKeyPath="inspectedObjectsController.selection.inspectorShowHexFlatAdjacency">
+        <sliver title="Tile Adjacency">
+            <property type="boolean" title="Above is filled" keyPath="inspectedObjectsController.selection.inspectorHexFlatAdjacencyUp_commit" />
+            <property type="boolean" title="Above Right is filled" keyPath="inspectedObjectsController.selection.inspectorHexFlatAdjacencyUpRight_commit" />
+            <property type="boolean" title="Below Right is filled" keyPath="inspectedObjectsController.selection.inspectorHexFlatAdjacencyDownRight_commit" />
+            <property type="boolean" title="Below is filled" keyPath="inspectedObjectsController.selection.inspectorHexFlatAdjacencyDown_commit" />
+            <property type="boolean" title="Below Left is filled" keyPath="inspectedObjectsController.selection.inspectorHexFlatAdjacencyDownLeft_commit" />
+            <property type="boolean" title="Above Left is filled" keyPath="inspectedObjectsController.selection.inspectorHexFlatAdjacencyUpLeft_commit" />
+        </sliver>
+    </section>
+</slice>

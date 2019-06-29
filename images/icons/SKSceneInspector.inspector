@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+SKSceneInspector.inspector
+SpriteKitEditor
+
+Copyright 2013 Apple Inc. All rights reserved.
+-->
+
+<slice>
+    <section>
+        <sliver title="Name">
+            <property type="string" placeholder="name" keyPath="inspectedObjectsController.selection.node.sk_name_commit" editable="true"/>
+        </sliver>
+        <sliver title="Camera">
+            <property type="sk-node"
+            classFilter="SKCameraNode"
+            allowNil="YES"
+            keyPath="inspectedObjectsController.selection.node.sk_cameraRef_commit"/>
+        </sliver>
+        <sliver title="Color">
+            <property type="color"
+            defaultColor="NSNamedColorSpace System controlBackgroundColor"
+            keyPath="inspectedObjectsController.selection.node.backgroundColor_commit" />
+        </sliver>
+    </section>
+    <section>
+        <sliver title="Size">
+            <property type="enumeration"
+                keyPath="inspectedObjectsController.selection.node.sk_sizeCategory_commit">
+                <option-group>
+                    <option title="Custom" value="0" />
+                </option-group>
+                <option-group>
+                    <option title="iPhone 6s Plus"  value="8" />
+                    <option title="iPhone 6s"       value="7" />
+                    <option title="iPhone SE"       value="6" />
+                    <option title="iPhone 4s"       value="5" />
+                </option-group>
+                <option-group>
+                    <option title="iPad Pro 12.9&quot;" value="3" />
+                    <option title="iPad 9.7&quot;"      value="4" />
+                </option-group>
+                <option-group>
+                    <option title="Apple Watch" value="2" />
+                </option-group>
+                <option-group>
+                    <option title="Apple TV" value="1" />
+                </option-group>
+            </property>
+        </sliver>
+        <sliver visibleKeyPath="inspectedObjectsController.selection.node.sk_isCustomSizeCategory">
+            <property type="sk-component-two"
+            keyPath="inspectedObjectsController.selection.node.sk_editorSize_commit"
+            editable="true" minX="0" minY="0" xLabel="W" yLabel="H"/>
+        </sliver>
+        <sliver visibleKeyPath="inspectedObjectsController.selection.node.sk_isSizeOrientationAvailable">
+            <property type="enumeration"
+                keyPath="inspectedObjectsController.selection.node.sk_sizeOrientation_commit">
+                <option-group>
+                    <option title="Landscape" value="0" />
+                    <option title="Portrait" value="1" />
+                </option-group>
+            </property>
+        </sliver>
+        <sliver visibleKeyPath="inspectedObjectsController.selection.node.sk_isDeviceSizeCategory">
+            <property type="scrubber"
+            keyPath="inspectedObjectsController.selection.node.sk_sizeScale_commit"
+            editable="true"
+            minValue="0.001"
+            increment="0.1"
+            title="Scale"/>
+        </sliver>
+        <sliver title="Anchor Point">
+            <property type="sk-component-two"
+            keyPath="inspectedObjectsController.selection.node.sk_anchorPoint_commit"
+            editable="true"/>
+        </sliver>
+    </section>
+    <section>
+        <sliver title="Gravity">
+            <property type="sk-component-two"
+            keyPath="inspectedObjectsController.selection.node.sk_spriteKitEditorGravity_commit"
+            editable="true" minX="-2147483648" minY="-2147483648"/>
+            </sliver>
+        <sliver title="Preview">
+            <property type="boolean"
+            title="Show Camera Boundaries"
+            keyPath="inspectedObjectsController.selection.node.sk_drawCameraEnabled"
+            editable="true"/>
+            <property type="boolean"
+            title="Show Physics Boundaries"
+            keyPath="inspectedObjectsController.selection.node.sk_physicsDrawEnabled"
+            editable="true"/>
+            <property type="boolean"
+            title="Use Camera Node"
+            keyPath="inspectedObjectsController.selection.node.sk_useCameraNode_commit"
+            editable="true"/>
+        </sliver>
+    </section>
+    <section>
+        <sliver title="Custom Shader">
+            <property type="sk-shader"
+            keyPath="inspectedObjectsController.selection.node.sk_customSpriteShader_commit"/>
+        </sliver>
+    </section>
+</slice>
+

@@ -24,7 +24,6 @@
 		A401F816221454100047C89B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A401F815221454100047C89B /* Assets.xcassets */; };
 		A401F81B221454100047C89B /* mWatchFace.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = A401F7FA2214540E0047C89B /* mWatchFace.app */; };
 		A401F827221457B90047C89B /* HideStatu.m in Sources */ = {isa = PBXBuildFile; fileRef = A401F825221457B80047C89B /* HideStatu.m */; };
-		A41355FE22C09CAF00862266 /* MyScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = A41355FD22C09CAF00862266 /* MyScene.sks */; };
 		A413560D22C1130200862266 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A413561222C1130200862266 /* InfoPlist.strings */; };
 		A413560E22C1130200862266 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A413561222C1130200862266 /* InfoPlist.strings */; };
 		A413560F22C1130200862266 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A413561222C1130200862266 /* InfoPlist.strings */; };
@@ -64,6 +63,7 @@
 		A462191722217F5700EA3E6C /* MainWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A462191622217F5700EA3E6C /* MainWindowController.swift */; };
 		A462191B2222D86600EA3E6C /* FaceSceneAddition.swift in Sources */ = {isa = PBXBuildFile; fileRef = A462191A2222D86600EA3E6C /* FaceSceneAddition.swift */; };
 		A46665F122BFD65B00923A2E /* ElementAddingWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46665F022BFD65B00923A2E /* ElementAddingWindowController.swift */; };
+		A49C71B422C4C12400AE95F4 /* MyScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = A49C71B322C4C12400AE95F4 /* MyScene.sks */; };
 		A4A30C9E22B5FD0A00A7E5BF /* AddNameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A30C9D22B5FD0A00A7E5BF /* AddNameController.swift */; };
 		A4B096EC22B3F34B00FA492E /* AddWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B096EB22B3F34B00FA492E /* AddWindowController.swift */; };
 		A4B096EF22B3F37900FA492E /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B096ED22B3F37900FA492E /* AddViewController.swift */; };
@@ -177,7 +177,6 @@
 		A401F825221457B80047C89B /* HideStatu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HideStatu.m; sourceTree = "<group>"; };
 		A401F826221457B80047C89B /* HideStatu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HideStatu.h; sourceTree = "<group>"; };
 		A40EB9EB2215B2EB004C3009 /* HandStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandStyle.swift; sourceTree = "<group>"; };
-		A41355FD22C09CAF00862266 /* MyScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MyScene.sks; sourceTree = "<group>"; };
 		A41355FF22C1121000862266 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		A413560022C1121100862266 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		A413560122C1121100862266 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Interface.strings"; sourceTree = "<group>"; };
@@ -213,6 +212,7 @@
 		A462191A2222D86600EA3E6C /* FaceSceneAddition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceSceneAddition.swift; sourceTree = "<group>"; };
 		A46665F022BFD65B00923A2E /* ElementAddingWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementAddingWindowController.swift; sourceTree = "<group>"; };
 		A47A311D22747CF800577962 /* README_CN.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README_CN.md; sourceTree = "<group>"; };
+		A49C71B322C4C12400AE95F4 /* MyScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MyScene.sks; sourceTree = "<group>"; };
 		A4A30C9D22B5FD0A00A7E5BF /* AddNameController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNameController.swift; sourceTree = "<group>"; };
 		A4B096EB22B3F34B00FA492E /* AddWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWindowController.swift; sourceTree = "<group>"; };
 		A4B096ED22B3F37900FA492E /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
@@ -410,7 +410,7 @@
 				A4B096ED22B3F37900FA492E /* AddViewController.swift */,
 				A4B0972922B53CD200FA492E /* ElementAddingViewController.swift */,
 				A46665F022BFD65B00923A2E /* ElementAddingWindowController.swift */,
-				A41355FD22C09CAF00862266 /* MyScene.sks */,
+				A49C71B322C4C12400AE95F4 /* MyScene.sks */,
 			);
 			path = WatchFace;
 			sourceTree = "<group>";
@@ -716,8 +716,8 @@
 				A46218EA2221436700EA3E6C /* Assets.xcassets in Resources */,
 				A462190F2221440400EA3E6C /* Assets.xcassets in Resources */,
 				A413562C22C11EC000862266 /* Localizable.strings in Resources */,
-				A41355FE22C09CAF00862266 /* MyScene.sks in Resources */,
 				A46218ED2221436700EA3E6C /* Main.storyboard in Resources */,
+				A49C71B422C4C12400AE95F4 /* MyScene.sks in Resources */,
 				A413561022C1130200862266 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

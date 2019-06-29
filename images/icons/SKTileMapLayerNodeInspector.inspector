@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ SKTileMapLayerNodeInspector.inspector
+ SpriteKitEditor
+ 
+ Copyright 2016 Apple Inc. All rights reserved.
+ -->
+
+<slice>
+    <section>
+        <sliver title="Name">
+            <property type="string" placeholder="name" keyPath="inspectedObjectsController.selection.node.sk_name_commit" editable="true"/>
+        </sliver>
+        <sliver title="Parent">
+            <property type="sk-node"
+            parentNode="true"
+            keyPath="inspectedObjectsController.selection.node.sk_parentRef_commit"/>
+        </sliver>
+    </section>
+    <section>
+        <sliver title="Position">
+            <property type="sk-component-two"
+            keyPath="inspectedObjectsController.selection.node.position_commit"
+            editable="true"/>
+        </sliver>
+        <sliver title="Z">
+            <property type="scrubber" title="Position"
+            keyPath="inspectedObjectsController.selection.node.zPosition_commit"
+            editable="true"
+            increment="1"
+            minValue ="-2147483648"/>
+            <property type="scrubber" title="Rotation"
+            keyPath="inspectedObjectsController.selection.node.sk_zRotationDeg_commit"
+            editable="true"
+            unit="°"
+            maxValue="360"
+            increment="1"/>
+        </sliver>
+        <sliver title="Anchor Point">
+            <property type="sk-component-two"
+            keyPath="inspectedObjectsController.selection.node.anchorPoint"
+            editable="true" incrementX="0.1" incrementY="0.1"/>
+        </sliver>
+    </section>
+    <section>
+        <sliver title="Scale">
+            <property type="scrubber" title="X"
+            keyPath="inspectedObjectsController.selection.node.xScale_commit"
+            editable="true"
+            increment="0.1"
+            minValue ="-2147483648"/>
+            <property type="scrubber" title="Y"
+            keyPath="inspectedObjectsController.selection.node.yScale_commit"
+            editable="true"
+            increment="0.1"
+            minValue ="-2147483648"/>
+        </sliver>
+    </section>
+    <section>
+        <sliver title="Alpha">
+            <property type="scrubber"
+            keyPath="inspectedObjectsController.selection.node.alpha_commit"
+            editable="true"
+            formatStyle="decimal"
+            minValue="0"
+            maxValue="1"
+            increment="0.1"/>
+        </sliver>
+    </section>
+    <section>
+        <sliver title="Map Size">
+            <property type="scrubber" title="Columns"
+            keyPath="inspectedObjectsController.selection.node.sk_columns_commit"
+            editable="true"
+            increment="1"
+            minValue ="1"/>
+            <property type="scrubber" title="Rows"
+            keyPath="inspectedObjectsController.selection.node.sk_rows_commit"
+            editable="true"
+            minValue="1"
+            increment="1"/>
+        </sliver>
+        <sliver title="Tile Size">
+            <property type="sk-component-two"
+            keyPath="inspectedObjectsController.selection.node.tileSize_commit"
+            editable="true" minX="0" minY="0" xLabel="W" yLabel="H"/>
+        </sliver>
+    </section>
+    <section>
+        <sliver title="Tile Sets">
+            <property type="enumeration" keyPath="inspectedObjectsController.selection.node.tileSetName_commit"
+            enumeratedValuesKeyPath="inspectedDocumentsController.selection.availableTileSetNames"
+            enumeratedDisplayValuesKeyPath="inspectedDocumentsController.selection.availableTileSetNames"/>
+            <property type="boolean" title="Enable Automapping" keyPath="inspectedObjectsController.selection.node.enableAutomapping" />
+        </sliver>
+    </section>
+    <section>
+        <sliver title="Lighting">
+            <property type="number" keyPath="inspectedObjectsController.selection.node.sk_lightingMask_commit" editable="true" increment="1" title="Light Mask"/>
+        </sliver>
+    </section>
+</slice>

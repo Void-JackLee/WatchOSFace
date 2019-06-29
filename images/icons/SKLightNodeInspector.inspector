@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+SKLightNodeInspector.inspector
+SpriteKitEditor
+
+Copyright 2014 Apple Inc. All rights reserved.
+-->
+
+<slice>
+    <section>
+        <sliver title="Name">
+            <property type="string" placeholder="name" keyPath="inspectedObjectsController.selection.node.sk_name_commit" editable="true"/>
+        </sliver>
+        <sliver title="Parent">
+            <property type="sk-node"
+            parentNode="true"
+            keyPath="inspectedObjectsController.selection.node.sk_parentRef_commit"/>
+        </sliver>
+    </section>
+    <section>
+        <sliver title="Position">
+            <property type="sk-component-two"
+            keyPath="inspectedObjectsController.selection.node.position_commit"
+            editable="true"/>
+        </sliver>
+        <sliver title="Z">
+            <property type="scrubber" title="Position"
+            keyPath="inspectedObjectsController.selection.node.zPosition_commit"
+            editable="true"
+            increment="1"
+            minValue ="-2147483648"/>
+        </sliver>
+    </section>
+    <section>
+        <sliver title="Color">
+            <property type="color"
+            defaultColor="NSNamedColorSpace System controlBackgroundColor"
+            keyPath="inspectedObjectsController.selection.node.lightColor_commit" />
+        </sliver>
+        <sliver title="Shadow Color">
+            <property type="color"
+            defaultColor="NSNamedColorSpace System controlBackgroundColor"
+            keyPath="inspectedObjectsController.selection.node.shadowColor_commit" />
+        </sliver>
+        <sliver title="Ambient Color">
+            <property type="color"
+            defaultColor="NSNamedColorSpace System controlBackgroundColor"
+            keyPath="inspectedObjectsController.selection.node.ambientColor_commit" />
+        </sliver>
+        <sliver title="Falloff">
+            <property type="scrubber"
+            keyPath="inspectedObjectsController.selection.node.lightDecay_commit"
+            editable="true"
+            minValue="0"
+            increment="1"/>
+        </sliver>
+    </section>
+    <section>
+        <sliver>
+            <property type="boolean" title="Enabled" keyPath="inspectedObjectsController.selection.node.enabled" />
+        </sliver>
+    </section>
+    <section>
+        <sliver title="Lighting Mask">
+            <property type="number"
+            keyPath="inspectedObjectsController.selection.node.lightCategoryBitMask_commit"
+            editable="true"
+            formatStyle="decimal"/>
+        </sliver>
+    </section>
+</slice>
+

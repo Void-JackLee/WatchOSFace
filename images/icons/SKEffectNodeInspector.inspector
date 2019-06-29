@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+SKEffectNodeInspector.inspector
+SpriteKitEditor
+
+Copyright 2012 Apple Inc. All rights reserved.
+-->
+
+<slice>
+    <section>
+        <sliver>
+            <property type="boolean" title="Enabled" keyPath="inspectedObjectsController.selection.node.effectsEnabled_commit" editable="true"/>
+            <property type="boolean" title="Rasterize" keyPath="inspectedObjectsController.selection.node.shouldRasterize_commit" editable="true"/>
+        </sliver>
+        <sliver title="Filter">
+            <property type="enumeration" keyPath="inspectedObjectsController.selection.node.filter_commit" insertsNullPlaceholder="true" placeholder="None" enumeratedValuesKeyPath="inspectedObjectsController.selection.node.sk_availableFilters" enumeratedDisplayValuesKeyPath="inspectedObjectsController.selection.node.sk_availableFilters.sk_displayName"/>
+        </sliver>
+        <sliver title="Blend Mode">
+            <property type="enumeration" keyPath="inspectedObjectsController.selection.node.blendMode_commit">
+                <option-group>
+                    <option title="SKBlendModeAlpha" value="0" />
+                </option-group>
+                <option-group>
+                    <option title="SKBlendModeAdd" value="1" />
+                    <option title="SKBlendModeSubtract" value="2" />
+                    <option title="SKBlendModeMultiply" value="3" />
+                    <option title="SKBlendModeMultiplyX2" value="4" />
+                    <option title="SKBlendModeScreen" value="5" />
+                    <option title="SKBlendModeReplace" value="6" />
+                </option-group>
+            </property>
+        </sliver>
+    </section>
+</slice>

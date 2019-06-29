@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+SKNodePhysicsInspector.inspector
+SpriteKitEditor
+
+Copyright 2012 Apple Inc. All rights reserved.
+-->
+
+<slice>
+    <section>
+        <sliver>
+            <property type="boolean"
+                      title="Participates in Physics"
+                      keyPath="inspectedObjectsController.selection.skInspectedParticipatesInPhysics"
+                      editable="true"/>
+        </sliver>
+        <sliver>
+            <property type="boolean"
+                      title="Affected by Gravity"
+                      keyPath="inspectedObjectsController.selection.physicsBody.affectedByGravity"
+                      enabledKeyPath="inspectedObjectsController.selection.skInspectedParticipatesInPhysics"
+                      editable="true"/>
+        </sliver>
+        <sliver title="Friction">
+            <property type="number"
+                      keyPath="inspectedObjectsController.selection.physicsBody.friction"
+                      enabledKeyPath="inspectedObjectsController.selection.skInspectedParticipatesInPhysics"
+                      editable="true"
+                      formatStyle="decimal"
+                      increment="1"/>
+        </sliver>
+        <sliver title="Restitution">
+            <property type="number"
+                      keyPath="inspectedObjectsController.selection.physicsBody.restitution"
+                      enabledKeyPath="inspectedObjectsController.selection.skInspectedParticipatesInPhysics"
+                      editable="true"
+                      formatStyle="decimal"
+                      increment="1"/>
+        </sliver>
+        <sliver title="Density">
+            <property type="number"
+                      keyPath="inspectedObjectsController.selection.physicsBody.density"
+                      enabledKeyPath="inspectedObjectsController.selection.skInspectedParticipatesInPhysics"
+                      editable="true"
+                      formatStyle="decimal"
+                      increment="1"/>
+        </sliver>
+        <sliver title="Mass">
+            <property type="number"
+                      keyPath="inspectedObjectsController.selection.physicsBody.mass"
+                      enabledKeyPath="inspectedObjectsController.selection.skInspectedParticipatesInPhysics"
+                      editable="true"
+                      formatStyle="decimal"
+                      increment="1"/>
+        </sliver>
+    </section>
+</slice>

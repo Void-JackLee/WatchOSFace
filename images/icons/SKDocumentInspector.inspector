@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+SKDocument.inspector
+SpriteKitEditor
+
+Copyright 2012 Apple Inc. All rights reserved.
+-->
+
+<slice>
+    <section>
+        <sliver title="Sample Section">
+            <property type="string" keyPath="inspectedDocumentsController.selection.fileURL.description" editable="false"/>
+        </sliver>
+    </section>
+</slice>

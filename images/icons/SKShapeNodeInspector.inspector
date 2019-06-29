@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+SKEmitterNodeInspector.inspector
+SpriteKitEditor
+
+Copyright 2014 Apple Inc. All rights reserved.
+-->
+
+<slice>
+    <section>
+        <sliver title="Name">
+            <property type="string" placeholder="name" keyPath="inspectedObjectsController.selection.node.sk_name_commit" editable="true"/>
+        </sliver>
+        <sliver title="Parent">
+            <property type="sk-node"
+            parentNode="true"
+            keyPath="inspectedObjectsController.selection.node.sk_parentRef_commit"/>
+        </sliver>
+    </section>
+    <section>
+        <sliver title="Position">
+            <property type="sk-component-two"
+            keyPath="inspectedObjectsController.selection.node.position_commit"
+            editable="true"/>
+        </sliver>
+        <sliver title="Z">
+            <property type="scrubber" title="Position"
+            keyPath="inspectedObjectsController.selection.node.zPosition_commit"
+            editable="true"
+            increment="1"
+            minValue ="-2147483648"/>
+            <property type="scrubber" title="Rotation"
+            keyPath="inspectedObjectsController.selection.node.sk_zRotationDeg_commit"
+            editable="true"
+            unit="°"
+            minValue="0"
+            maxValue="360"
+            increment="10"/>
+        </sliver>
+    </section>
+    <section>
+        <sliver title="Scale">
+            <property type="scrubber" title="X"
+            keyPath="inspectedObjectsController.selection.node.xScale_commit"
+            editable="true"
+            minValue="0"
+            increment="0.1"/>
+            <property type="scrubber" title="Y"
+            keyPath="inspectedObjectsController.selection.node.yScale_commit"
+            editable="true"
+            minValue="0"
+            increment="0.1"/>
+        </sliver>
+    </section>
+    <section>
+        <sliver title="Stroke Color">
+            <property type="color"
+            defaultColor="NSNamedColorSpace System controlBackgroundColor"
+            keyPath="inspectedObjectsController.selection.node.strokeColor_commit" />
+        </sliver>
+        <sliver title="Fill Color">
+            <property type="color"
+            defaultColor="NSNamedColorSpace System controlBackgroundColor"
+            keyPath="inspectedObjectsController.selection.node.fillColor_commit" />
+        </sliver>
+    </section>
+    <section>
+        <sliver title="Line Width">
+            <property type="scrubber"
+            keyPath="inspectedObjectsController.selection.node.lineWidth_commit"
+            editable="true"
+            formatStyle="decimal"
+            minValue="0"
+            increment="1.0"/>
+        </sliver>
+        <sliver title="Glow Width">
+            <property type="scrubber"
+            keyPath="inspectedObjectsController.selection.node.glowWidth_commit"
+            editable="true"
+            formatStyle="decimal"
+            minValue="0"
+            increment="1.0"/>
+        </sliver>
+        <sliver title="Alpha">
+            <property type="scrubber"
+            keyPath="inspectedObjectsController.selection.node.alpha_commit"
+            editable="true"
+            formatStyle="decimal"
+            minValue="0"
+            maxValue="1"
+            increment="0.1"/>
+        </sliver>
+        <sliver>
+            <property type="boolean"
+            title="Antialiased"
+            keyPath="inspectedObjectsController.selection.node.antialiased_commit"
+            editable="true"/>
+        </sliver>
+    </section>
+    <section>
+        <sliver title="Stroke Texture">
+            <property type="sk-texture"
+            keyPath="inspectedObjectsController.selection.node.sk_strokeTextureImageName_commit"/>
+        </sliver>
+        <sliver title="Fill Texture">
+            <property type="sk-texture"
+            keyPath="inspectedObjectsController.selection.node.sk_fillTextureImageName_commit"/>
+        </sliver>
+    </section>
+</slice>

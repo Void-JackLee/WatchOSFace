@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+SKNodeInspector.inspector
+SpriteKitEditor
+
+Copyright 2012 Apple Inc. All rights reserved.
+-->
+
+<slice>
+    <section>
+        <sliver title="Name">
+            <property type="string"
+            allowsNilValues="true"
+            keyPath="inspectedObjectsController.selection.node.sk_name_commit"
+            editable="true"/>
+        </sliver>
+        <sliver title="Parent">
+            <property type="sk-node"
+            parentNode="true"
+            keyPath="inspectedObjectsController.selection.node.sk_parentRef_commit"/>
+        </sliver>
+    </section>
+    <section>
+        <sliver title="Position">
+            <property type="sk-component-two"
+            keyPath="inspectedObjectsController.selection.node.position_commit"
+            editable="true"/>
+        </sliver>
+        <sliver title="Z Position">
+            <property type="scrubber"
+            keyPath="inspectedObjectsController.selection.node.zPosition_commit"
+            editable="true"
+            increment="1"
+            minValue ="-2147483648"/>
+        </sliver>
+    </section>
+    <section>
+        <sliver title="Strength">
+            <property type="scrubber"
+            keyPath="inspectedObjectsController.selection.node.strength_commit"
+            editable="true"
+            formatStyle="decimal"
+            increment="0.1"/>
+        </sliver>
+    </section>
+    <section>
+        <sliver title="Falloff">
+            <property type="scrubber"
+            keyPath="inspectedObjectsController.selection.node.falloff_commit"
+            editable="true"
+            formatStyle="decimal"
+            minValue="0"
+            increment="0.1"/>
+        </sliver>
+    </section>
+    <section>
+        <sliver title="Anim. Speed">
+            <property type="scrubber"
+            keyPath="inspectedObjectsController.selection.node.animationSpeed_commit"
+            editable="true"
+            formatStyle="decimal"
+            increment="0.1"/>
+        </sliver>
+    </section>
+    <section>
+        <sliver title="Min Radius">
+            <property type="scrubber"
+            keyPath="inspectedObjectsController.selection.node.minimumRadius_commit"
+            editable="true"
+            formatStyle="decimal"
+            minValue="0"
+            increment="0.1"/>
+        </sliver>
+    </section>
+    <section>
+        <sliver title="Direction">
+            <property type="sk-component-two"
+            keyPath="inspectedObjectsController.selection.node.sk_editorDirection_commit"
+            editable="true"/>
+        </sliver>
+    </section>
+    <section>
+        <sliver title="Category Mask">
+            <property type="number" keyPath="inspectedObjectsController.selection.node.categoryBitMask_commit"/>
+        </sliver>
+    </section>
+    <section>
+        <sliver>
+            <property type="boolean" title="Enabled" keyPath="inspectedObjectsController.selection.node.enabled_commit" />
+        </sliver>
+    </section>
+</slice>

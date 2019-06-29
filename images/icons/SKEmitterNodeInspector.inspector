@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+SKEmitterNodeInspector.inspector
+SpriteKitEditor
+
+Copyright 2012 Apple Inc. All rights reserved.
+-->
+
+<slice>
+    <section>
+        <sliver title="Name">
+            <property type="string" placeholder="name"
+            keyPath="inspectedObjectsController.selection.node.sk_name_commit"
+            editable="true"/>
+        </sliver>
+        <sliver title="Parent" visibleKeyPath="inspectedDocumentsController.selection.isSceneDocument">
+            <property type="sk-node"
+            parentNode="true"
+            keyPath="inspectedObjectsController.selection.node.sk_parentRef_commit"/>
+        </sliver>
+    </section>
+    <section visibleKeyPath="inspectedDocumentsController.selection.isSceneDocument">
+        <sliver title="Target Node">
+            <property type="sk-node"
+            parentNode="false"
+            keyPath="inspectedObjectsController.selection.node.sk_inspectorTargetNode_commit"/>
+        </sliver>
+    </section>
+    <section visibleKeyPath="inspectedDocumentsController.selection.isSceneDocument">
+        <sliver title="Position">
+            <property type="sk-component-two"
+            keyPath="inspectedObjectsController.selection.node.position_commit"
+            editable="true"/>
+        </sliver>
+        <sliver title="Z">
+            <property type="scrubber" title="Position"
+            keyPath="inspectedObjectsController.selection.node.zPosition_commit"
+            editable="true"
+            increment="1"
+            minValue ="-2147483648"/>
+        </sliver>
+    </section>
+    <section visibleKeyPath="inspectedDocumentsController.selection.isSceneDocument">
+        <sliver title="Scale">
+            <property type="scrubber" title="X"
+            keyPath="inspectedObjectsController.selection.node.xScale_commit"
+            increment="0.1"
+            editable="true"
+            minValue="0"/>
+            <property type="scrubber" title="Y"
+            keyPath="inspectedObjectsController.selection.node.yScale_commit"
+            editable="true"
+            increment="0.1"
+            minValue="0"/>
+        </sliver>
+    </section>
+    <section visibleKeyPath="inspectedDocumentsController.selection.isParticleDocument">
+        <sliver title="Background">
+            <property type="color"
+                defaultColor="NSNamedColorSpace System controlBackgroundColor"
+                keyPath="inspectedObjectsController.selection.node.sk_backgroundColor_commit" />
+        </sliver>
+    </section>
+    <section title="Particles">
+        <sliver title="Texture">
+            <property type="sk-texture"
+                keyPath="inspectedObjectsController.selection.node.sk_particleTextureImageName_commit"/>
+        </sliver>
+    </section>
+    <section>
+        <sliver title="Emitter">
+            <property type="scrubber" title="Birthrate"
+                keyPath="inspectedObjectsController.selection.node.particleBirthRate_commit"
+                increment="1"
+                editable="true"
+                minValue="0"/>
+            <property type="scrubber" title="Maximum"
+                keyPath="inspectedObjectsController.selection.node.numParticlesToEmit_commit"
+                editable="true"
+                increment="10"
+                minValue="0"/>
+        </sliver>
+    </section>
+    <section>
+        <sliver title="Lifetime">
+            <property type="scrubber" title="Start"
+                keyPath="inspectedObjectsController.selection.node.particleLifetime_commit"
+                editable="true"
+                increment="1"
+                minValue="0"/>
+            <property type="scrubber" title="Range"
+                keyPath="inspectedObjectsController.selection.node.particleLifetimeRange_commit"
+                editable="true"
+                increment="1"
+                minValue="0"/>
+        </sliver>
+    </section>
+    <section>
+        <sliver title="Position Range">
+            <property type="sk-component-two"
+            keyPath="inspectedObjectsController.selection.node.particlePositionRange_commit"
+            editable="true" />
+        </sliver>
+        <sliver title="Z">
+            <property type="scrubber" title="Position"
+            keyPath="inspectedObjectsController.selection.node.particleZPosition_commit"
+            increment="1"
+            editable="true"
+            minValue ="-2147483648"/>
+        </sliver>
+        <sliver title="Angle">
+            <property type="scrubber" title="Start"
+                keyPath="inspectedObjectsController.selection.node.sk_emissionAngleDeg_commit"
+                editable="true"
+                unit="°"
+                increment="1"
+                minValue="-360"
+                maxValue="360"/>
+            <property type="scrubber" title="Range"
+                keyPath="inspectedObjectsController.selection.node.sk_emissionAngleRangeDeg_commit"
+                editable="true"
+                unit="°"
+                increment="1"
+                minValue="0"
+                maxValue="360"/>
+        </sliver>
+        <sliver title="Speed">
+            <property type="scrubber" title="Start"
+                keyPath="inspectedObjectsController.selection.node.particleSpeed_commit"
+                editable="true"
+                increment="1"/>
+            <property type="scrubber" title="Range"
+                keyPath="inspectedObjectsController.selection.node.particleSpeedRange_commit"
+                editable="true"
+                increment="1"
+                minValue="0"/>
+        </sliver>
+        <sliver title="Acceleration">
+            <property type="scrubber" title="X"
+            keyPath="inspectedObjectsController.selection.node.xAcceleration_commit"
+            increment="1"
+            editable="true"/>
+            <property type="scrubber" title="Y"
+            keyPath="inspectedObjectsController.selection.node.yAcceleration_commit"
+            increment="1"
+            editable="true"/>
+        </sliver>
+    </section>
+    <section>
+        <sliver title="Alpha">
+            <property type="scrubber" title="Start"
+            keyPath="inspectedObjectsController.selection.node.particleAlpha_commit"
+            increment="1"
+            minValue="0"
+            editable="true"/>
+        </sliver>
+        <sliver>
+            <property type="scrubber" title="Range"
+            keyPath="inspectedObjectsController.selection.node.particleAlphaRange_commit"
+            increment="1"
+            minValue="0"
+            editable="true"/>
+            <property type="scrubber" title="Speed"
+            keyPath="inspectedObjectsController.selection.node.particleAlphaSpeed_commit"
+            increment="1"
+            editable="true"/>
+        </sliver>
+    </section>
+    <section>
+        <sliver title="Scale">
+            <property type="scrubber" title="Start"
+            keyPath="inspectedObjectsController.selection.node.particleScale_commit"
+            increment="1"
+            minValue="0"
+            editable="true"/>
+        </sliver>
+        <sliver>
+            <property type="scrubber" title="Range"
+            keyPath="inspectedObjectsController.selection.node.particleScaleRange_commit"
+            increment="1"
+            minValue="0"
+            editable="true"/>
+            <property type="scrubber" title="Speed"
+            keyPath="inspectedObjectsController.selection.node.particleScaleSpeed_commit"
+            increment="1"
+            editable="true"/>
+        </sliver>
+    </section>
+    <section>
+        <sliver title="Rotation">
+            <property type="scrubber" title="Start"
+            keyPath="inspectedObjectsController.selection.node.sk_particleRotationDeg_commit"
+            increment="1"
+            unit="°"
+            minValue="-360"
+            maxValue="360"
+            editable="true"/>
+        </sliver>
+        <sliver>
+            <property type="scrubber" title="Range"
+            keyPath="inspectedObjectsController.selection.node.sk_particleRotationRangeDeg_commit"
+            increment="1"
+            unit="°"
+            minValue="0"
+            maxValue="360"
+            editable="true"/>
+            <property type="scrubber" title="Speed"
+            keyPath="inspectedObjectsController.selection.node.sk_particleRotationSpeedDeg_commit"
+            increment="1"
+            unit="°"
+            minValue="-360"
+            maxValue="360"
+            editable="true"/>
+        </sliver>
+    </section>
+    <section>
+        <sliver title="Color Blend">
+            <property type="scrubber" title="Factor"
+            keyPath="inspectedObjectsController.selection.node.particleColorBlendFactor_commit"
+            increment="1"
+            minValue="0"
+            editable="true"/>
+        </sliver>
+        <sliver>
+            <property type="scrubber" title="Range"
+            keyPath="inspectedObjectsController.selection.node.particleColorBlendFactorRange_commit"
+            increment="1"
+            minValue="0"
+            editable="true"/>
+            <property type="scrubber" title="Speed"
+            keyPath="inspectedObjectsController.selection.node.particleColorBlendFactorSpeed_commit"
+            increment="1"
+            editable="true"/>
+        </sliver>
+    </section>
+    <section>
+        <sliver title="Color Ramp">
+            <property type="sk-color-ramp"
+            keyPath="inspectedObjectsController.selection.node.particleColorSequence_commit"
+            editable="true"/>
+        </sliver>
+    </section>
+    <section>
+        <sliver title="Blend Mode">
+            <property type="enumeration"
+                keyPath="inspectedObjectsController.selection.node.particleBlendMode_commit">
+                
+                <option-group>
+                <option title="Alpha" value="0" />
+                </option-group>
+                <option-group>
+                    <option title="Add"         value="1" />
+                    <option title="Subtract"    value="2" />
+                    <option title="Multiply"    value="3" />
+                    <option title="MultiplyX2"  value="4" />
+                    <option title="Screen"      value="5" />
+                    <option title="Replace"     value="6" />
+                </option-group>
+            </property>
+        </sliver>
+    </section>
+    <section>
+        <sliver title="Field Mask">
+            <property type="number" keyPath="inspectedObjectsController.selection.node.fieldBitMask_commit"/>
+        </sliver>
+    </section>
+    <section>
+        <sliver title="Custom Shader">
+            <property type="sk-shader"
+            keyPath="inspectedObjectsController.selection.node.sk_customSpriteShader_commit"/>
+        </sliver>
+    </section>
+</slice>
+

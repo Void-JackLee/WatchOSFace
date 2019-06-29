@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ SKTileSetInspector.inspector
+ SpriteKitEditor
+ 
+ Copyright 2016 Apple Inc. All rights reserved.
+ -->
+
+<slice>
+    <section>
+        <sliver title="Name">
+            <property type="string" placeholder="name" keyPath="inspectedObjectsController.selection.name_commit" editable="true"/>
+        </sliver>
+    </section>
+    <section>
+        <sliver title="Type">
+            <property type="enumeration"
+                keyPath="inspectedObjectsController.selection.type_commit">
+                <option-group>
+                    <option title="Grid" value="0" />
+                </option-group>
+                <option-group>
+                    <option title="Isometric"  value="1" />
+                    <option title="Hexagonal Flat" value="2" />
+                    <option title="Hexagonal Pointy" value="3" />
+                </option-group>
+            </property>
+        </sliver>
+        <sliver title="Default Tile Size">
+            <property type="sk-component-two"
+            keyPath="inspectedObjectsController.selection.defaultTileSize_commit"
+            editable="true" minX="0" minY="0" xLabel="W" yLabel="H"/>
+        </sliver>
+    </section>
+</slice>

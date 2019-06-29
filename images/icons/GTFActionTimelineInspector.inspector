@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+SKActionTimelineInspector.inspector
+SpriteKitEditor
+
+Copyright 2013 Apple Inc. All rights reserved.
+-->
+
+<slice>
+    <section>
+        <sliver title="Total Duration">
+            <property type="number"
+            keyPath="inspectedObjectsController.selection.totalDuration"
+            editable="true"
+            formatStyle="decimal"
+            minimum="0"
+            increment="0.1"/>
+        </sliver>
+        <sliver title="Duration Scale">
+            <property type="number"
+            keyPath="inspectedObjectsController.selection.durationScale"
+            editable="true"
+            formatStyle="decimal"
+            minimum="0"
+            increment="0.1"/>
+        </sliver>
+    </section>
+</slice>

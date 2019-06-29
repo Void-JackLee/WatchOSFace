@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+SKNodeInspector.inspector
+SpriteKitEditor
+
+Copyright 2012 Apple Inc. All rights reserved.
+-->
+
+<slice>
+    <section>
+        <sliver title="Name">
+            <property type="string"
+            allowsNilValues="true"
+            placeholder="name"
+            keyPath="inspectedObjectsController.selection.node.sk_name_commit"
+            editable="true"/>
+        </sliver>
+        <sliver title="Parent">
+            <property type="sk-node"
+            parentNode="true"
+            keyPath="inspectedObjectsController.selection.node.sk_parentRef_commit"/>
+        </sliver>
+    </section>
+    <section>
+        <sliver title="Position">
+            <property type="sk-component-two"
+            keyPath="inspectedObjectsController.selection.node.position_commit"
+            editable="true"/>
+        </sliver>
+        <sliver title="Z">
+            <property type="scrubber" title="Position"
+            keyPath="inspectedObjectsController.selection.node.zPosition_commit"
+            editable="true"
+            increment="1"
+            minValue ="-2147483648"/>
+            <property type="scrubber" title="Rotation"
+            keyPath="inspectedObjectsController.selection.node.sk_zRotationDeg_commit"
+            editable="true"
+            unit="°"
+            maxValue="360"
+            increment="1"/>
+        </sliver>
+    </section>
+    <section>
+        <sliver title="Scale">
+            <property type="scrubber" title="X"
+            keyPath="inspectedObjectsController.selection.node.xScale_commit"
+            editable="true"
+            increment="0.1"
+            minValue ="-2147483648"/>
+            <property type="scrubber" title="Y"
+            keyPath="inspectedObjectsController.selection.node.yScale_commit"
+            editable="true"
+            increment="0.1"
+            minValue ="-2147483648"/>
+        </sliver>
+    </section>
+    <section>
+        <sliver title="Alpha">
+            <property type="scrubber"
+            keyPath="inspectedObjectsController.selection.node.alpha_commit"
+            editable="true"
+            formatStyle="decimal"
+            minValue="0"
+            maxValue="1"
+            increment="0.1"/>
+        </sliver>
+    </section>
+</slice>

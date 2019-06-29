@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+SKNodeInspector.inspector
+SpriteKitEditor
+
+Copyright 2012 Apple Inc. All rights reserved.
+-->
+
+<slice>
+    <section>
+        <sliver title="Name">
+            <property type="string"
+            placeholder="name"
+            allowsNilValues="true"
+            keyPath="inspectedObjectsController.selection.node.sk_name_commit"
+            editable="true"/>
+        </sliver>
+        <sliver title="Parent">
+            <property type="sk-node"
+            parentNode="true"
+            keyPath="inspectedObjectsController.selection.node.sk_parentRef_commit"/>
+        </sliver>
+    </section>
+    <section>
+        <sliver title="Position">
+            <property type="sk-component-two"
+            keyPath="inspectedObjectsController.selection.node.position_commit"
+            editable="true"/>
+        </sliver>
+        <sliver title="Z">
+            <property type="scrubber" title="Position"
+            keyPath="inspectedObjectsController.selection.node.zPosition_commit"
+            editable="true"
+            increment="1"
+            minValue ="-2147483648"/>
+            <property type="scrubber" title="Rotation"
+            keyPath="inspectedObjectsController.selection.node.sk_zRotationDeg_commit"
+            editable="true"
+            unit="°"
+            maxValue="360"
+            increment="1"/>
+        </sliver>
+    </section>
+    <section>
+        <sliver title="Scale">
+            <property type="scrubber" title="X"
+            keyPath="inspectedObjectsController.selection.node.xScale_commit"
+            editable="true"
+            increment="0.1"
+            minValue ="-2147483648"/>
+            <property type="scrubber" title="Y"
+            keyPath="inspectedObjectsController.selection.node.yScale_commit"
+            editable="true"
+            increment="0.1"
+            minValue ="-2147483648"/>
+        </sliver>
+    </section>
+    <section title="Physics Definition">
+        <sliver title="Body Type">
+            <property type="enumeration"
+                keyPath="inspectedObjectsController.selection.node.sk_physicsBodyType_commit">
+                <option-group>
+                    <option title="None" value="0" />
+                </option-group>
+                <option-group>
+                    <option title="Bounding circle" value="1" />
+                </option-group>
+            </property>
+        </sliver>
+        <sliver visibleKeyPath="inspectedObjectsController.selection.node.sk_hasPhysicsBody">
+            <property type="scrubber" title="Body Radius"
+            keyPath="inspectedObjectsController.selection.node.sk_physicsBodyRadius_commit"
+            editable="true"
+            increment="0.1"
+            minValue="0.1"/>
+            <property type="boolean" title="Dynamic" keyPath="inspectedObjectsController.selection.node.sk_physicsBodyDynamicType_commit" />
+            <property type="boolean" title="Allows Rotation" keyPath="inspectedObjectsController.selection.node.sk_physicsBodyAllowsRotation_commit" />
+            <property type="boolean" title="Pinned" keyPath="inspectedObjectsController.selection.node.sk_physicsBodyPinned_commit" />
+            <property type="boolean" title="Affected By Gravity" keyPath="inspectedObjectsController.selection.node.sk_physicsBodyAffectedByGravity_commit" />
+            <property type="scrubber" title="Friction"
+            keyPath="inspectedObjectsController.selection.node.sk_physicsBodyFriction_commit" editable="true"
+            minValue="0.0"
+            maxValue="1.0"/>
+            <property type="scrubber" title="Restitution"
+            keyPath="inspectedObjectsController.selection.node.sk_physicsBodyRestitution_commit"
+            editable="true"
+            minValue="0.0"
+            maxValue="1.0"
+            increment="0.1"/>
+            <property type="scrubber" title="Lin. Damping"
+            keyPath="inspectedObjectsController.selection.node.sk_physicsBodyLinearDamping_commit"
+            editable="true"
+            increment="0.1"/>
+            <property type="scrubber" title="Ang. Damping"
+            keyPath="inspectedObjectsController.selection.node.sk_physicsBodyAngularDamping_commit"
+            editable="true"
+            minValue="0.0"
+            maxValue="1.0"
+            increment="0.1"/>
+            <property type="number" title="Mass"
+            keyPath="inspectedObjectsController.selection.node.sk_physicsMass_commit"
+            editable="true"
+            formatStyle="decimal"
+            increment="1"/>
+        </sliver>
+        <sliver title="Category Mask" visibleKeyPath="inspectedObjectsController.selection.node.sk_hasPhysicsBody">
+            <property type="number" keyPath="inspectedObjectsController.selection.node.sk_categoryMask_commit" editable="true" increment="1"/>
+        </sliver>
+        <sliver title="Collision Mask" visibleKeyPath="inspectedObjectsController.selection.node.sk_hasPhysicsBody">
+            <property type="number" keyPath="inspectedObjectsController.selection.node.sk_collisionMask_commit" editable="true" increment="1"/>
+        </sliver>
+        <sliver title="Field Mask" visibleKeyPath="inspectedObjectsController.selection.node.sk_hasPhysicsBody">
+            <property type="number" keyPath="inspectedObjectsController.selection.node.sk_fieldMask_commit" editable="true" increment="1"/>
+        </sliver>
+        <sliver title="Contact Mask" visibleKeyPath="inspectedObjectsController.selection.node.sk_hasPhysicsBody">
+            <property type="number" keyPath="inspectedObjectsController.selection.node.sk_contactMask_commit" editable="true" increment="1"/>
+        </sliver>
+    </section>
+</slice>

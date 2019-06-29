@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ SKTileDefinitionInspector.inspector
+ SpriteKitEditor
+ 
+ Copyright 2016 Apple Inc. All rights reserved.
+ -->
+
+<slice>
+    <section>
+        <sliver title="Name">
+            <property type="string" placeholder="name" keyPath="inspectedObjectsController.selection.name_commit" editable="true"/>
+        </sliver>
+    </section>
+    <section>
+        <sliver title="Textures">
+            <property type="sk-multi-texture"
+            keyPath="inspectedObjectsController.selection.inspectorTextureFilenames_commit"/>
+            <property type="scrubber" title="Time Per Frame"
+            keyPath="inspectedObjectsController.selection.timePerFrame_commit"
+            enabledKeyPath="inspectedObjectsController.selection.inspectorTimePerFrameEnabled"
+            editable="true"
+            increment="0.1"
+            minValue ="0.0"/>
+        </sliver>
+    </section>
+    <section>
+        <sliver title="Size">
+            <property type="sk-component-two"
+            keyPath="inspectedObjectsController.selection.size_commit"
+            editable="true" minX="0" minY="0" xLabel="W" yLabel="H"/>
+        </sliver>
+        <sliver>
+            <property type="scrubber" title="Placement Weight"
+            keyPath="inspectedObjectsController.selection.placementWeight_commit"
+            editable="true"
+            increment="1"
+            minValue ="0"/>
+        </sliver>
+    </section>
+    <section visibleKeyPath="inspectedObjectsController.selection.inspectorCanRotateDefinition">
+        <sliver title="Rotation">
+            <property type="enumeration"
+                keyPath="inspectedObjectsController.selection.inspectorRotation_commit">
+                <option-group>
+                    <option title="None" value="0" />
+                </option-group>
+                <option-group>
+                    <option title="90 degrees"  value="1" />
+                    <option title="180 degrees" value="2" />
+                    <option title="270 degrees" value="3" />
+                </option-group>
+            </property>
+            <property type="boolean" title="Flip Vertically" keyPath="inspectedObjectsController.selection.inspectorFlipVertically_commit" />
+            <property type="boolean" title="Flip Horizontally" keyPath="inspectedObjectsController.selection.inspectorFlipHorizontally_commit" />
+        </sliver>
+    </section>
+    <section visibleKeyPath="inspectedObjectsController.selection.inspectorCannotRotateDefinition">
+        <sliver title="Orientation">
+            <property type="boolean" title="Flip Vertically" keyPath="inspectedObjectsController.selection.inspectorFlipVertically_commit" />
+            <property type="boolean" title="Flip Horizontally" keyPath="inspectedObjectsController.selection.inspectorFlipHorizontally_commit" />
+        </sliver>
+    </section>
+</slice>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+SKActionMoveInspector.inspector
+SpriteKitEditor
+
+Copyright 2013 Apple Inc. All rights reserved.
+-->
+
+<slice visibleKeyPath="inspectedDocumentsController.selection.isSceneEditor">
+    <section>
+        <sliver title="Actions">
+            <property type="sk-namedactions"
+            keyPath="inspectedObjectsController.selection.actions"/>
+        </sliver>
+    </section>
+</slice>
+

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+SKNodeInspector.inspector
+SpriteKitEditor
+
+Copyright 2012 Apple Inc. All rights reserved.
+-->
+
+<slice>
+    <section>
+        <sliver title="Name">
+            <property type="string"
+            placeholder="name"
+            allowsNilValues="true"
+            keyPath="inspectedObjectsController.selection.node.sk_name_commit"
+            editable="true"/>
+        </sliver>
+        <sliver title="Filename">
+            <property type="sk-sound"
+            keyPath="inspectedObjectsController.selection.node.audioFileName_commit"/>
+        </sliver>
+        <sliver title="Parent">
+            <property type="sk-node"
+            parentNode="true"
+            keyPath="inspectedObjectsController.selection.node.sk_parentRef_commit"/>
+        </sliver>
+    </section>
+    <section>
+        <sliver>
+            <property type="boolean" title="Autoplay" keyPath="inspectedObjectsController.selection.node.autoplayLooped_commit"/>
+            <property type="boolean" title="Positional" keyPath="inspectedObjectsController.selection.node.positional_commit"/>
+        </sliver>
+        <sliver title="Position" visibleKeyPath="inspectedObjectsController.selection.node.positional">
+            <property type="sk-component-two"
+            keyPath="inspectedObjectsController.selection.node.position_commit"
+            editable="true"/>
+        </sliver>
+    </section>
+</slice>

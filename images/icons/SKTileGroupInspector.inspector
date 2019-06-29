@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ SKTileGroupInspector.inspector
+ SpriteKitEditor
+ 
+ Copyright 2016 Apple Inc. All rights reserved.
+ -->
+
+<slice>
+    <section>
+        <sliver title="Name">
+            <property type="string" placeholder="name" keyPath="inspectedObjectsController.selection.name_commit" editable="true"/>
+        </sliver>
+    </section>
+</slice>

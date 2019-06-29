@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+SKActionHideInspector.inspector
+SpriteKitEditor
+
+Copyright 2013 Apple Inc. All rights reserved.
+-->
+
+<slice>
+<!--    <section visibleKeyPath="inspectedDocumentsController.selection.isSceneEditor">>-->
+<!--        <sliver title="Node">-->
+<!--            <property type="string"-->
+<!--            keyPath="inspectedDocumentsController.selection.inspectedAction.targetName"-->
+<!--            editable="NO"/>-->
+<!--        </sliver>-->
+<!--        <sliver title="Key">-->
+<!--            <property type="string"-->
+<!--            keyPath="inspectedDocumentsController.selection.inspectedAction.keyName"-->
+<!--            editable="YES"/>-->
+<!--        </sliver>-->
+<!--    </section>-->
+    <section>
+        <sliver title="Start Time">
+            <property type="number"
+            keyPath="inspectedObjectsController.selection.inspectorStartTime"
+            editable="true"
+            formatStyle="decimal"
+            minimum="0"
+            increment="0.1"/>
+        </sliver>
+        <sliver title="Duration">
+            <property type="number"
+            keyPath="inspectedObjectsController.selection.inspectorDuration"
+            editable="true"
+            formatStyle="decimal"
+            minimum="0"
+            increment="0.1"/>
+        </sliver>
+    </section>
+</slice>

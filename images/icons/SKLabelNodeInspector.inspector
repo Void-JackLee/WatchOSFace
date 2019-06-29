@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+SKDocument.inspector
+SpriteKitEditor
+
+Copyright 2012 Apple Inc. All rights reserved.
+-->
+
+<slice>
+    <section>
+        <sliver title="Name">
+            <property type="string" placeholder="name" keyPath="inspectedObjectsController.selection.node.sk_name_commit" editable="true"/>
+        </sliver>
+        <sliver title="Parent">
+            <property type="sk-node"
+            parentNode="true"
+            keyPath="inspectedObjectsController.selection.node.sk_parentRef_commit"/>
+        </sliver>
+    </section>
+    <section>
+        <sliver title="Position">
+            <property type="sk-component-two"
+            keyPath="inspectedObjectsController.selection.node.position_commit"
+            editable="true" />
+        </sliver>
+        <sliver title="Z">
+            <property type="scrubber" title="Position"
+            keyPath="inspectedObjectsController.selection.node.zPosition_commit"
+            editable="true"
+            increment="1"
+            minValue ="-2147483648"/>
+            <property type="scrubber" title="Rotation"
+            keyPath="inspectedObjectsController.selection.node.sk_zRotationDeg_commit"
+            editable="true"
+            increment="1"/>
+        </sliver>
+    </section>
+    <section visibleKeyPath="inspectedObjectsController.selection.node.sk_enhancedLabelsAvailable">
+        <chooser title="Text" type="number" keyPath="inspectedObjectsController.selection.node.sk_useAttributedString">
+            <choice title="Plain" value="0">
+                <sliver>
+                    <property type="string" placeholder="Text" keyPath="inspectedObjectsController.selection.node.text_commit"/>
+                </sliver>
+                <sliver title="Color">
+                    <property type="color"
+                    defaultColor="NSNamedColorSpace System controlBackgroundColor"
+                    keyPath="inspectedObjectsController.selection.node.fontColor_commit" />
+                </sliver>
+                <sliver title="Font">
+                    <property type="font"
+                    keyPath="inspectedObjectsController.selection.node.sk_font_commit"
+                    editable="true"/>
+                </sliver>
+            </choice>
+            <choice title="Attributed" value="1">
+                <sliver>
+                    <property type="string" configurableProperty="attributedText" placeholder="Text" attributed="true" keyPath="inspectedObjectsController.selection.node.sk_attributedText_commit"/>
+                </sliver>
+            </choice>
+        </chooser>
+    </section>
+    <section visibleKeyPath="inspectedObjectsController.selection.node.sk_simpleLabelsOnly">
+        <sliver title="Text">
+            <property type="string" placeholder="Text" keyPath="inspectedObjectsController.selection.node.text_commit"/>
+        </sliver>
+        <sliver title="Color">
+            <property type="color"
+            defaultColor="NSNamedColorSpace System controlBackgroundColor"
+            keyPath="inspectedObjectsController.selection.node.fontColor_commit" />
+        </sliver>
+        <sliver title="Font">
+            <property type="font"
+            keyPath="inspectedObjectsController.selection.node.sk_font_commit"
+            editable="true"/>
+        </sliver>
+    </section>
+    <section>
+        <sliver title="Horizontal">
+            <property type="enumeration"
+                keyPath="inspectedObjectsController.selection.node.horizontalAlignmentMode_commit">
+                <option-group>
+                    <option title="Center" value="0" />
+                </option-group>
+                <option-group>
+                    <option title="Left"        value="1" />
+                    <option title="Right"       value="2" />
+                </option-group>
+            </property>
+        </sliver>
+        <sliver title="Vertical">
+            <property type="enumeration"
+                keyPath="inspectedObjectsController.selection.node.verticalAlignmentMode_commit">
+                <option-group>
+                    <option title="Baseline" value="0" />
+                </option-group>
+                <option-group>
+                    <option title="Center"   value="1" />
+                    <option title="Top"      value="2" />
+                    <option title="Bottom"   value="3" />
+                </option-group>
+            </property>
+        </sliver>
+    </section>
+    <section visibleKeyPath="inspectedObjectsController.selection.node.sk_enhancedLabelsAvailable">
+        <sliver title="Line Break">
+            <property type="enumeration" placeholder="Line Break Mode" keyPath="inspectedObjectsController.selection.node.sk_lineBreakMode_commit">
+                <option-group>
+                    <option title="Clip" value="2" />
+                </option-group>
+                <option-group>
+                    <option title="Character Wrap" value="1" />
+                    <option title="Word Wrap" value="0" />
+                </option-group>
+                <option-group>
+                    <option title="Truncate Head" value="3" />
+                    <option title="Truncate Middle" value="5" />
+                    <option title="Truncate Tail" value="4" />
+                </option-group>
+            </property>
+        </sliver>
+        <sliver title="Lines">
+            <property type="number" keyPath="inspectedObjectsController.selection.node.sk_numberOfLines_commit" editable="true" increment="1"/>
+        </sliver>
+        <sliver title="Line Width">
+            <property type="scrubber"
+            keyPath="inspectedObjectsController.selection.node.sk_preferredMaxLayoutWidth_commit"
+            editable="true"
+            formatStyle="decimal"
+            minValue="0"
+            increment="1.0"/>
+        </sliver>
+    </section>
+    <section>
+        <sliver title="Alpha">
+            <property type="scrubber"
+            keyPath="inspectedObjectsController.selection.node.alpha_commit"
+            editable="true"
+            formatStyle="decimal"
+            minValue="0"
+            maxValue="1"
+            increment="0.1"/>
+        </sliver>
+        
+        <sliver>
+            <property type="boolean"
+            title="Hidden"
+            keyPath="inspectedObjectsController.selection.node.hidden_commit"
+            editable="true"/>
+        </sliver>
+    </section>
+</slice>
+

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+SKCustomClass.inspector
+SpriteKitEditor
+
+Copyright 2012 Apple Inc. All rights reserved.
+-->
+
+<slice>
+    <section>
+        <sliver title="Custom Class">
+            <property type="string"
+            allowsNilValues="true"
+            placeholderKeyPath="inspectedObjectsController.selection.node.sk_CustomClassPlaceholderName"
+            keyPath="inspectedObjectsController.selection.node.sk_legacyCustomClassName_commit"
+            editable="true"/>
+        </sliver>
+        <sliver title="Module">
+            <property type="string"
+            allowsNilValues="true"
+            keyPath="inspectedObjectsController.selection.node.sk_legacyCustomModuleName_commit"
+            editable="true"/>
+        </sliver>
+    </section>
+</slice>
