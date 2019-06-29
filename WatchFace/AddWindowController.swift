@@ -144,14 +144,3 @@ extension AddWindowController : NSTouchBarDelegate
         return item
     }
 }
-
-extension AddWindowController : NSPopoverDelegate {
-    
-    func popoverShouldDetach(_ popover: NSPopover) -> Bool {
-        return true
-    }
-    
-    func detachableWindow(for popover: NSPopover) -> NSWindow? {
-        return nil
-    }
-}
