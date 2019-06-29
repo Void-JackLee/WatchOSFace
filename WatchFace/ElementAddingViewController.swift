@@ -68,7 +68,7 @@ class ElementAddingViewController: NSViewController {
     
     func addTo(index : Int)
     {
-        
+        view.window?.close()
     }
     
     func selected(index : Int)
@@ -91,7 +91,10 @@ class ElementAddingViewController: NSViewController {
             scene!.removeAllChildren()
             let emitterNode = SKEmitterNode()
             emitterNode.particleTexture = SKTexture(imageNamed: "dot") //粒子图片
-            emitterNode.particleSize =  CGSize(width: 1, height: 1) //粒子大小
+            emitterNode.particleColorRedRange = 255
+            emitterNode.particleColorBlueRange = 255
+            emitterNode.particleColorGreenRange = 255
+            emitterNode.particleSize =  CGSize(width: 1.5, height: 1.5) //粒子大小
             emitterNode.position = CGPoint(x: 0, y: 0) //粒子发射器的位置
             emitterNode.particleBirthRate = 100 //粒子出生率
             emitterNode.particleLifetime = 3 //粒子生命时长

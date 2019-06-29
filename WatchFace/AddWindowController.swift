@@ -42,13 +42,6 @@ class AddWindowController: NSWindowController {
     override func windowDidLoad() {
         super.windowDidLoad()
         
-        // Set location
-        let WIDTH = window!.frame.width
-        let HEIGHT = window!.frame.height
-        let WIDTH_SCREEN = NSScreen.main?.frame.width ?? 0
-        let HEIGHT_SCREEN = NSScreen.main?.frame.height ?? 0
-        window!.setFrame(NSRect(x: (WIDTH_SCREEN - WIDTH) / 2, y: (HEIGHT_SCREEN - HEIGHT) / 2, width: WIDTH, height: HEIGHT), display: true, animate: false)
-        
         // Set stuff
         window?.title = getString("window_theme_add_title")
         window?.standardWindowButton(.miniaturizeButton)?.isHidden = true

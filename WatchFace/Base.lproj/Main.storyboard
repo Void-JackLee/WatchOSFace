@@ -950,36 +950,35 @@ DQ
             <objects>
                 <viewController storyboardIdentifier="controller_adding" showSeguePresentationStyle="single" id="H7V-ry-zwn" customClass="ElementAddingViewController" customModule="WatchFace" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="uE9-2t-4Cs">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="269"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <scrollView borderType="line" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uQq-9w-85C">
-                                <rect key="frame" x="0.0" y="0.0" width="210" height="270"/>
+                                <rect key="frame" x="-1" y="-1" width="210" height="271"/>
                                 <clipView key="contentView" copiesOnScroll="NO" id="KEv-N3-qwE">
-                                    <rect key="frame" x="1" y="1" width="208" height="268"/>
+                                    <rect key="frame" x="1" y="1" width="208" height="269"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <view id="JLp-0L-TeW">
-                                            <rect key="frame" x="0.0" y="0.0" width="193" height="253"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="193" height="254"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         </view>
                                     </subviews>
                                 </clipView>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="270" id="gnY-QY-iFz"/>
                                     <constraint firstAttribute="width" constant="210" id="gy1-Ni-Q1U"/>
                                 </constraints>
                                 <scroller key="horizontalScroller" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="3Jr-yI-6j0">
-                                    <rect key="frame" x="1" y="253" width="208" height="16"/>
+                                    <rect key="frame" x="1" y="254" width="208" height="16"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                                 <scroller key="verticalScroller" wantsLayer="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="jNt-o8-gdl">
-                                    <rect key="frame" x="193" y="1" width="16" height="268"/>
+                                    <rect key="frame" x="193" y="1" width="16" height="269"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                             </scrollView>
                             <customView translatesAutoresizingMaskIntoConstraints="NO" id="ZDA-Uf-M3Y">
-                                <rect key="frame" x="210" y="0.0" width="270" height="135"/>
+                                <rect key="frame" x="209" y="0.0" width="271" height="135"/>
                                 <subviews>
                                     <scrollView fixedFrame="YES" borderType="none" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mJX-gI-13x">
                                         <rect key="frame" x="20" y="20" width="230" height="95"/>
@@ -1011,21 +1010,21 @@ DQ
                                 </subviews>
                             </customView>
                             <customView translatesAutoresizingMaskIntoConstraints="NO" id="SQX-pd-dZg">
-                                <rect key="frame" x="210" y="135" width="270" height="135"/>
+                                <rect key="frame" x="209" y="135" width="271" height="134"/>
                             </customView>
                         </subviews>
                         <constraints>
                             <constraint firstItem="ZDA-Uf-M3Y" firstAttribute="height" secondItem="SQX-pd-dZg" secondAttribute="height" id="6pg-28-39p"/>
                             <constraint firstItem="SQX-pd-dZg" firstAttribute="top" secondItem="uE9-2t-4Cs" secondAttribute="top" id="Fut-yt-7Pc"/>
-                            <constraint firstAttribute="bottom" secondItem="uQq-9w-85C" secondAttribute="bottom" id="HON-6m-f3l"/>
+                            <constraint firstAttribute="bottom" secondItem="uQq-9w-85C" secondAttribute="bottom" constant="-1" id="HON-6m-f3l"/>
                             <constraint firstItem="SQX-pd-dZg" firstAttribute="leading" secondItem="uQq-9w-85C" secondAttribute="trailing" id="IqI-vr-Ptw"/>
                             <constraint firstAttribute="trailing" secondItem="SQX-pd-dZg" secondAttribute="trailing" id="MG5-vc-jfS"/>
                             <constraint firstItem="ZDA-Uf-M3Y" firstAttribute="top" secondItem="SQX-pd-dZg" secondAttribute="bottom" id="MXi-8O-10h"/>
                             <constraint firstAttribute="trailing" secondItem="ZDA-Uf-M3Y" secondAttribute="trailing" id="bgl-j0-Kv5"/>
                             <constraint firstItem="ZDA-Uf-M3Y" firstAttribute="leading" secondItem="uQq-9w-85C" secondAttribute="trailing" id="gvw-cx-Iv9"/>
-                            <constraint firstItem="uQq-9w-85C" firstAttribute="leading" secondItem="uE9-2t-4Cs" secondAttribute="leading" id="iGw-SO-eyc"/>
+                            <constraint firstItem="uQq-9w-85C" firstAttribute="leading" secondItem="uE9-2t-4Cs" secondAttribute="leading" constant="-1" id="iGw-SO-eyc"/>
                             <constraint firstAttribute="bottom" secondItem="ZDA-Uf-M3Y" secondAttribute="bottom" id="qAt-bw-tdI"/>
-                            <constraint firstItem="uQq-9w-85C" firstAttribute="top" secondItem="uE9-2t-4Cs" secondAttribute="top" id="vVk-ye-9AF"/>
+                            <constraint firstItem="uQq-9w-85C" firstAttribute="top" secondItem="uE9-2t-4Cs" secondAttribute="top" constant="-1" id="vVk-ye-9AF"/>
                             <constraint firstItem="ZDA-Uf-M3Y" firstAttribute="width" secondItem="SQX-pd-dZg" secondAttribute="width" id="xCG-FT-Fge"/>
                         </constraints>
                     </view>
@@ -1039,52 +1038,52 @@ DQ
                 </viewController>
                 <customObject id="Qk7-IX-HCJ" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1324" y="730"/>
+            <point key="canvasLocation" x="1324" y="744"/>
         </scene>
         <!--Add View Controller-->
         <scene sceneID="UsI-zk-f02">
             <objects>
                 <viewController id="yCM-bb-QAg" customClass="AddViewController" customModule="WatchFace" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="ERo-xN-zsT">
-                        <rect key="frame" x="0.0" y="0.0" width="634" height="421"/>
+                        <rect key="frame" x="0.0" y="0.0" width="502" height="421"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <visualEffectView appearanceType="inheritedVibrantLight" blendingMode="behindWindow" material="underWindowBackground" state="followsWindowActiveState" translatesAutoresizingMaskIntoConstraints="NO" id="AyY-5j-h6L">
-                                <rect key="frame" x="0.0" y="0.0" width="634" height="421"/>
+                                <rect key="frame" x="0.0" y="0.0" width="502" height="421"/>
                             </visualEffectView>
                             <splitView arrangesAllSubviews="NO" dividerStyle="thin" vertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fx9-u1-Pif">
-                                <rect key="frame" x="0.0" y="0.0" width="634" height="421"/>
+                                <rect key="frame" x="0.0" y="0.0" width="502" height="421"/>
                                 <subviews>
                                     <customView fixedFrame="YES" id="nER-MK-iAW" userLabel="Preview Container">
-                                        <rect key="frame" x="0.0" y="0.0" width="383" height="421"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="251" height="421"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                     </customView>
                                     <splitView arrangesAllSubviews="NO" dividerStyle="thin" id="52H-yb-X4W">
-                                        <rect key="frame" x="384" y="0.0" width="250" height="421"/>
+                                        <rect key="frame" x="252" y="0.0" width="250" height="421"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <subviews>
                                             <customView id="oap-pu-Ceu" userLabel="TableView Container">
-                                                <rect key="frame" x="0.0" y="0.0" width="250" height="100"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="250" height="101"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <subviews>
                                                     <scrollView horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7wC-7b-Mw0">
-                                                        <rect key="frame" x="0.0" y="0.0" width="250" height="100"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="250" height="101"/>
                                                         <clipView key="contentView" id="9Ae-CQ-XDV">
-                                                            <rect key="frame" x="1" y="1" width="248" height="98"/>
+                                                            <rect key="frame" x="1" y="1" width="248" height="99"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
                                                                 <view id="vGp-Lp-EjH">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="233" height="83"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="233" height="84"/>
                                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                 </view>
                                                             </subviews>
                                                         </clipView>
                                                         <scroller key="horizontalScroller" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="Otz-KZ-3zO">
-                                                            <rect key="frame" x="1" y="83" width="248" height="16"/>
+                                                            <rect key="frame" x="1" y="84" width="248" height="16"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                         </scroller>
                                                         <scroller key="verticalScroller" wantsLayer="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="Jva-0l-5g7">
-                                                            <rect key="frame" x="233" y="1" width="16" height="98"/>
+                                                            <rect key="frame" x="233" y="1" width="16" height="99"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                         </scroller>
                                                     </scrollView>
@@ -1098,7 +1097,7 @@ DQ
                                                 </constraints>
                                             </customView>
                                             <customView fixedFrame="YES" id="AaZ-nR-J4x" userLabel="Inspector Container">
-                                                <rect key="frame" x="0.0" y="101" width="250" height="320"/>
+                                                <rect key="frame" x="0.0" y="102" width="250" height="319"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                             </customView>
                                         </subviews>
@@ -1129,14 +1128,14 @@ DQ
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="previewHolder" destination="nER-MK-iAW" id="vac-Vc-DUR"/>
+                        <outlet property="previewHolder" destination="nER-MK-iAW" id="vFY-K1-nhK"/>
                         <outlet property="scrollerView" destination="7wC-7b-Mw0" id="MDA-e9-Ks7"/>
                         <segue destination="bVV-uR-IYZ" kind="show" identifier="jump_element_adding" id="Dhx-90-Cf7"/>
                     </connections>
                 </viewController>
                 <customObject id="3bH-Ds-1un" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="687" y="731"/>
+            <point key="canvasLocation" x="687" y="744"/>
         </scene>
         <!--Main View Controller-->
         <scene sceneID="hIz-AP-VOD">
