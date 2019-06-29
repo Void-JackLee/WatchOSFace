@@ -14,7 +14,7 @@ class ElementAddingWindowController: NSWindowController, NSWindowDelegate {
         super.windowDidLoad()
         window!.delegate = self
         let panel = window as! NSPanel
-        panel.styleMask = [.hudWindow, .titled]
+        panel.styleMask = [.hudWindow, .titled, .fullSizeContentView]
         panel.titlebarAppearsTransparent = true
         panel.isMovableByWindowBackground = true
         panel.titleVisibility = .hidden
