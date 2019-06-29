@@ -56,12 +56,12 @@ class AddNameController: NSViewController {
         var dirName = name
         if name == ""
         {
-            EasyMethod.showAlert(string_empty_name, .critical)
+            EasyMethod.showAlert(getString("empty_name"), .critical)
         } else
         {
             if name.contains("/") || name.contains(".") || name.contains("*") || name.contains("?") || name.contains("#")
             {
-                EasyMethod.showAlert(string_invalid_name, .critical)
+                EasyMethod.showAlert(getString("invalid_name"), .critical)
             } else
             {
                 if dirName.contains(" ")
@@ -93,7 +93,7 @@ extension AddNameController : NSTextViewDelegate
     func textDidChange(_ notification: Notification) {
         if editText.string == ""
         {
-            titleField.placeholderString = NSLocalizedString("string_name", comment: "Name")
+            titleField.placeholderString = getString("name")
         } else
         {
             titleField.placeholderString = ""
@@ -146,13 +146,13 @@ extension AddingTextView
         var itemDescription = ""
         switch identifier {
         case .init("item_OK"):
-            itemDescription = string_touchbar_description_ok
-            let button = NSButton(title: string_button_ok, target: self, action: #selector(add))
+            itemDescription = getString("touchbar_description_ok")
+            let button = NSButton(title: getString("button_ok"), target: self, action: #selector(add))
             button.bezelColor = NSColor.controlAccentColor
             item.view = button
         case .init("item_Cancel"):
-            itemDescription = string_touchbar_description_cancel
-            item.view = NSButton(title: string_button_cancel, target: self, action: #selector(cancel))
+            itemDescription = getString("touchbar_description_cancel")
+            item.view = NSButton(title: getString("button_cancel"), target: self, action: #selector(cancel))
         default:
             print("???")
         }

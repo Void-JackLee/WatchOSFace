@@ -39,7 +39,7 @@ class AddViewController: NSViewController {
         scrollerView.drawsBackground = false
         elementTableView.backgroundColor = NSColor.clear
         let column = NSTableColumn(identifier: NSUserInterfaceItemIdentifier("name"))
-        column.title = NSLocalizedString("string_name", comment: "Name")
+        column.title = getString("name")
         column.isEditable = false
         //column.width = scrollerView.frame.width + 100
         column.minWidth = column.width

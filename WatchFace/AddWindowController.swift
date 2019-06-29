@@ -36,7 +36,7 @@ class AddWindowController: NSWindowController {
     
     override func prepare(for segue: NSStoryboardSegue, sender: Any?) {
         theme = sender as? CustomTheme
-        window?.title = string_window_theme_add_title + " - " + theme!.name
+        window?.title = getString("window_theme_add_title") + " - " + theme!.name
     }
     
     override func windowDidLoad() {
@@ -50,7 +50,7 @@ class AddWindowController: NSWindowController {
         window!.setFrame(NSRect(x: (WIDTH_SCREEN - WIDTH) / 2, y: (HEIGHT_SCREEN - HEIGHT) / 2, width: WIDTH, height: HEIGHT), display: true, animate: false)
         
         // Set stuff
-        window?.title = string_window_theme_add_title
+        window?.title = getString("window_theme_add_title")
         window?.standardWindowButton(.miniaturizeButton)?.isHidden = true
         
         
@@ -77,11 +77,11 @@ class AddWindowController: NSWindowController {
     
     @IBAction func cancelClick(_ sender: Any) {
         let alert : NSAlert = NSAlert()
-        alert.addButton(withTitle: string_button_back)
-        alert.addButton(withTitle: string_button_ok)
+        alert.addButton(withTitle: getString("button_back"))
+        alert.addButton(withTitle: getString("button_ok"))
         //alert.buttons[1].target = self
         //alert.buttons[1].action = #selector(cancelAdding)
-        alert.messageText = string_message_discard_change
+        alert.messageText = getString("message_discard_change")
         alert.beginSheetModal(for: window!) { (response : NSApplication.ModalResponse) in
             if response ==  NSApplication.ModalResponse.alertSecondButtonReturn
             {
@@ -125,16 +125,16 @@ extension AddWindowController : NSTouchBarDelegate
         var itemDescription = ""
         switch identifier {
         case item_add:
-            itemDescription = string_touchbar_description_element_add
+            itemDescription = getString("touchbar_description_element_add")
             item.view = NSButton(image: NSImage(named: NSImage.Name("NSAddTemplate"))!, target: self, action: #selector(addElementAction))
         case item_remove:
-            itemDescription = string_touchbar_description_element_remove
+            itemDescription = getString("touchbar_description_element_remove")
             item.view = NSButton(image: NSImage(named: NSImage.Name("NSTrashEmpty"))!, target: self, action: nil)
         case item_confirm:
-            itemDescription = string_touchbar_description_theme_confirm
+            itemDescription = getString("touchbar_description_theme_confirm")
             item.view = NSButton(image: NSImage(named: NSImage.Name("progresshud-success"))!, target: self, action: #selector(confirmClick))
         case item_cancel:
-            itemDescription = string_touchbar_description_theme_edit_cancel
+            itemDescription = getString("touchbar_description_theme_edit_cancel")
             item.view = NSButton(image: NSImage(named: NSImage.Name("progresshud-error"))!, target: self, action: #selector(cancelClick))
         default:
             print("???")

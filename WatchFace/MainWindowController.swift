@@ -44,8 +44,8 @@ class MainWindowController : NSWindowController
         window?.standardWindowButton(.miniaturizeButton)?.isHidden = true
         window?.standardWindowButton(.zoomButton)?.isHidden = true
         //window?.titlebarAppearsTransparent = true
-        window?.title = string_window_main_title
-        titleLabel.title = string_window_main_title
+        window?.title = getString("window_main_title")
+        titleLabel.title = getString("window_main_title")
         
         // Receive window transform condition
         NotificationCenter.default.addObserver(self, selector: #selector(change), name: Notification.Name("isOpen"), object: nil) //obj是发送对象
@@ -101,9 +101,9 @@ class MainWindowController : NSWindowController
                     let alert : NSAlert = NSAlert()
                     alert.alertStyle = .informational
                     
-                    alert.messageText = "\(string_message_tmp_1)\(name)\(string_message_tmp_2)"
-                    alert.addButton(withTitle: string_button_continue)
-                    alert.addButton(withTitle: string_button_create_new_theme)
+                    alert.messageText = "\(getString("message_tmp_1"))\(name)\(getString("message_tmp_2"))"
+                    alert.addButton(withTitle: getString("button_continue"))
+                    alert.addButton(withTitle: getString("button_create_new_theme"))
                     let type = alert.runModal()
                     if type == .alertSecondButtonReturn
                     {
@@ -190,13 +190,13 @@ extension MainWindowController : NSTouchBarDelegate
         var itemDescription = ""
         switch identifier {
         case item_add:
-            itemDescription = string_touchbar_description_fresh_list
+            itemDescription = getString("touchbar_description_fresh_list")
             item.view = NSButton(image: NSImage(named: NSImage.Name("NSAddTemplate"))!, target: self, action: #selector(touchAdd))
         case item_fresh:
-            itemDescription = string_touchbar_description_add
+            itemDescription = getString("touchbar_description_add")
             item.view = NSButton(image: NSImage(named: NSImage.Name("NSRefreshTemplate"))!, target: self, action: #selector(touchFresh))
         case item_expand:
-            itemDescription = string_touchbar_description_expand
+            itemDescription = getString("touchbar_description_expand")
             item.view = expandButton
         default:
             print("???")
